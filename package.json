@@ -1,0 +1,31 @@
+{
+  "name": "barbershop",
+  "main": "templates/index.pug",
+  "repository": "git@github.com:justGoodFellow/barbershop.git",
+  "author": "Sergey Bodnaryuk <bodnaryuk_s.a@hotmail.com>",
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "browser-sync": "^2.18.13",
+    "css-mqpacker": "^6.0.1",
+    "del": "^3.0.0",
+    "editorconfig-tools": "^0.1.1",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-imagemin": "^3.3.0",
+    "gulp-minify": "^1.0.0",
+    "gulp-plumber": "^1.1.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-svgmin": "^1.2.4",
+    "gulp-svgstore": "^6.1.0",
+    "run-sequence": "^2.2.0"
+  },
+  "scripts": {
+    "test": "editorconfig-tools check *",
+    "build": "gulp build",
+    "start": "npm run build && gulp serve"
+  }
+}
