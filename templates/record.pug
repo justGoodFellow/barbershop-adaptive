@@ -1,0 +1,64 @@
+extend ./layouts/base.pug
+
+block content
+  section.record
+    .record__wrapper
+      div
+        h2.record__title
+          | Запись на стрижку
+        a.record__btn.btn(href='index.html')
+          | На главную
+      form.record__form
+        .record__form-data
+          div
+            input(type='text', placeholder='Фамилия')
+            input(type='text', placeholder='Имя')
+            input(type='text', placeholder='Отчество')
+          div
+            input(type='tel', placeholder='Контактный телефон')
+            input(type='email', placeholder='Контактный e-mail')
+          div
+            textarea(placeholder='Доп. информация для мастера')
+        .record__form-model
+          h3.record__form-title
+            | Выберите модель бороды:
+          div
+            label
+              input(type='radio')
+              | Адмирал
+            label
+              input(type='radio')
+              | Лесоруб
+            label
+              input(type='radio')
+              | Полярник
+            label
+              input(type='radio')
+              | Боярин
+            label
+              input(type='radio')
+              | Мудрец
+        .record__form-extra
+          h3.record__form-title
+            | Дополнительные услуги:
+          div
+            label
+              input(type='checkbox', checked)
+              | Подкрасить бороду
+            label
+              input(type='checkbox', checked)
+              | Накрутить усы
+            label
+              input(type='checkbox')
+              | Причесать бороду
+            label
+              input(type='checkbox')
+              | Подровнять виски
+            label
+              input(type='checkbox')
+              | Убрать седину
+            label
+              input(type='checkbox')
+              | Отполировать лысину
+        button.btn.record__btn(type='submit')
+          | Отправить

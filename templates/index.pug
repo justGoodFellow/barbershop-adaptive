@@ -1,13 +1,160 @@
-doctype html
-html(lang='ru')
-  head
-    meta(charset='utf-8')
-    title
-      | Test
-    meta(name='viewport', content='width=device-width, initial-scale=1')
-    meta(http-equiv='x-ua-compatible', content='ie=edge')
-    link(rel='stylesheet', href='css/style.min.css')
-    script(src='js/concatenated.js')
-  body
-    h1
-      | Test
+extend ./layouts/base.pug
+
+block content
+  section.stats
+    header.stats__header
+      h2.stats__title.visually-hidden
+        | Статистика Барбершопа
+      b.stats__slogan
+        | Стрижка у нас
+        br
+        | это выгодно!
+      p.stats__intro
+        | Мужская стрижка требует точного подходаю. Обратимся к статистике:
+      small.stats__legend.stats__legend--top
+        sup
+          | *
+        |
+        | - приведенные данные ложь
+    table.stats__items
+      tr
+        td.stats__value
+          | 1 500
+          sup
+            | *
+        td.stats__field
+          | рублей
+          br
+          | вложений
+      tr
+        td.stats__value
+          | 7 200
+        td.stats__field
+          | секунд
+          br
+          | времени мастера
+      tr
+        td.stats__value
+          | 90 000
+        td.stats__field
+          | постриженных
+          br
+          | волос
+      tr
+        td.stats__value
+          | 500 000
+          sup
+            | *
+        td.stats__field
+          | лайков и
+          br
+          | комплиментов
+    small.stats__legend.stats__legend--bottom
+      sup
+        | *
+      |
+      | - приведенные данные ложь
+  section.advantages
+    .advantages__wrapper.slider
+      h2.advantages__title.visually-hidden
+        | Наши преимущества
+      input.slider__input(type='radio', name='advantages', id='advantages-input-1', checked)
+      input.slider__input(type='radio', name='advantages', id='advantages-input-2')
+      input.slider__input(type='radio', name='advantages', id='advantages-input-3')
+      ul.advantages__items
+        li.advantages__item.advantages__item--fast.slider__item
+          h3.advantages__item-title
+            | Быстро
+          p
+            | Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки
+        li.advantages__item.advantages__item--cool.slider__item
+          h3.advantages__item-title
+            | Круто
+          p
+            | Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино. Во всяком случае внешне.
+        li.advantages__item.advantages__item--expensive.slider__item
+          h3.advantages__item-title
+            | Дорого
+          p
+            | Наши мастера — профессионалы своего делаи не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?
+      .advantages__toggles.slider__toggles
+        label.slider__toggle(for='advantages-input-1')
+          | 1
+        label.slider__toggle(for='advantages-input-2')
+          | 2
+        label.slider__toggle(for='advantages-input-3')
+          | 3
+  section.news
+    .news__wrapper
+      h2.news__title
+        | Новости и акции
+      ul.news__items
+        li.news__item
+          time.news__date(datetime="2015-09-29")
+            b
+              | 29
+            |
+            | сент
+          p
+            | Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.
+        li.news__item
+          time.news__date(datetime="2015-09-19")
+            b
+              | 19
+            |
+            | сент
+          p
+            | В нашей команде пополнение, Борис «Бритва» Стригунец, пополнил наши стройные ряды. Спешите записаться!
+        li.news__item
+          time.news__date(datetime="2015-09-09")
+            b
+              | 9
+            |
+            | сент
+          p
+            | Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!
+      a.news__to-all.btn(href='#')
+        | Показать все
+  secton.reviews
+    .reviews__wrapper.slider
+      div
+        h2.reviews__title
+          | Отзывы о нас
+        a.reviews__write.btn(href='#')
+          | Оставить свой
+      input.slider__input(type='radio', name='reviews', id='reviews-input-1', checked)
+      input.slider__input(type='radio', name='reviews', id='reviews-input-2')
+      input.slider__input(type='radio', name='reviews', id='reviews-input-3')
+      .reviews__items
+        blockquote.reviews__item.slider__item
+          .reviews__author-foto
+            img(src='http://via.placeholder.com/50x49', width='50', height='49', alt='Фото Трэвиса Баркера')
+          cite.reviews__athor-name
+            | Трэвис Баркер
+          p
+            | Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
+        blockquote.reviews__item.slider__item
+          .reviews__author-foto
+            img(src='http://via.placeholder.com/50x49', width='50', height='49', alt='Фото Трэвиса Баркера')
+          cite.reviews__athor-name
+            | Трэвис Баркер
+          p
+            | Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
+        blockquote.reviews__item.slider__item
+          .reviews__author-foto
+            img(src='http://via.placeholder.com/50x49', width='50', height='49', alt='Фото Трэвиса Баркера')
+          cite.reviews__athor-name
+            | Трэвис Баркер
+          p
+            | Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
+        button.reviews__prev(type='button')
+          | Предыдущий отзыв
+        button.next(type='button')
+          | Следующий отзыв
+        .reviews__toggles.slider__toggles
+          label.slider__toggle(for='reviews-input-1')
+            | 1
+          label.slider__toggle(for='reviews-input-2')
+            | 2
+          label.slider__toggle(for='reviews-input-3')
+            | 3

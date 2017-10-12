@@ -1,0 +1,120 @@
+extend ./layouts/base.pug
+
+block content
+  section.work
+    .work__wrapper
+      div
+        h2.work__title
+          | Наши работы
+        a.btn(href='index.html')
+          | На главную
+      .work__items
+        .work__item.work__item--big
+          .work__item-photo.work__item-photo--big
+            img(src='http://via.placeholder.com/280x480', width='280', height='480', alt='Лжепётр Мчиславский')
+            span.work__item-best
+              | Работа месяца
+          .work__item-content
+            h3.work__item-name
+              | Лжепётр Мчиславский
+            p.work__item-review
+              | Где я только ни стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и до скорого!
+            div
+              span.work__item-done.work__item-done--clip
+                | Стрижка
+              span.work__item-done.work__item-done--beard
+                | Бритье
+              span.work__item-done.work__item-done--mustache
+                | Усы
+        .work__item
+          .work__item-photo
+            img(src='http://via.placeholder.com/280x176', width='280', height='176', alt='Саша Мальцев')
+          .work__item-content
+            h3.work__item-name
+              | Саша Мальцев
+            p.work__item-review
+              | Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?
+            div
+              span.work__item-done.work__item-done--clip
+                | Стрижка
+        .work__item
+          .work__item-photo
+            img(src='http://via.placeholder.com/280x176', width='280', height='176', alt='Владимир Иваныч')
+          .work__item-content
+            h3.work__item-name
+              | Владимир Иваныч
+            p.work__item-review
+              | К зимнему сезону — готов!
+            div
+              span.work__item-done.work__item-done--beard
+                | Борода
+              span.work__item-done.work__item-done--mustache
+                | Усы
+        .work__item
+          .work__item-photo
+            img(src='http://via.placeholder.com/280x176', width='280', height='176', alt='Винстон Синий')
+          .work__item-content
+            h3.work__item-name
+              | Винстон Синий
+            p.work__item-review
+              | Как только заростаю и волосы начинают мешать видеть — бегом в Бородинский!
+            div
+              span.work__item-done.work__item-done--clip
+                | Стрижка
+  section.price
+    .price__wrapper
+      h2.price__title
+        | Прейскурант
+      div
+        table.price__items
+          tr
+            td.price__item-number
+              | 1
+            td
+              | Классическая стрижка
+            td
+              | с мытьем головы
+            td
+              | 1 500 руб.
+          tr
+            td.price__item-number
+              | 2
+            td
+              | Современный вариант
+            td
+              | с мытьем головы
+            td
+              | 1 500 руб.
+          tr
+            td.price__item-number
+              | 3
+            td
+              | Индивидуальный подход
+            td
+              | с мытьем головы
+            td
+              | 2 000 руб.
+          tr
+            td.price__item-number
+              | 4
+            td
+              | Бритьё бороды
+            td
+              | без мытья
+            td
+              | 500 руб.
+          tr
+            td
+              | 5
+            td
+              | Бритьё головы
+            td
+              | с мытьем головы
+            td
+              | 1 000 руб.
+        div
+          img(src='http://via.placeholder.com/57x58', width='58', height='57', alt='Время')
+          span
+            | С 10:00 до 14:00
+            br
+            | Скидка 20%
