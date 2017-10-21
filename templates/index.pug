@@ -90,37 +90,40 @@ block content
         | Новости и акции
       ul.news__items
         li.news__item
-          time.news__date(datetime="2015-09-29")
-            b
-              | 29
-            |
-            | сент
-          p
-            | Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.
+          a.news__item-link(href='#')
+            time.news__date(datetime='2015-09-29')
+              b
+                | 29
+              |
+              | сент
+            p
+              | Нам наконец завезли Ягермайстер! Теперь вы можете пропусить стаканчик во время стрижки.
         li.news__item
-          time.news__date(datetime="2015-09-19")
-            b
-              | 19
-            |
-            | сент
-          p
-            | В нашей команде пополнение, Борис «Бритва» Стригунец, пополнил наши стройные ряды. Спешите записаться!
+          a.news__item-link(href='#')
+            time.news__date(datetime='2015-09-19')
+              b
+                | 19
+              |
+              | сент
+            p
+              | В нашей команде пополнение, Борис «Бритва» Стригунец, пополнил наши стройные ряды. Спешите записаться!
         li.news__item
-          time.news__date(datetime="2015-09-09")
-            b
-              | 9
-            |
-            | сент
-          p
-            | Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!
-      a.news__to-all.btn(href='#')
+          a.news__item-link(href='#')
+            time.news__date(datetime='2015-09-09')
+              b
+                | 9
+              |
+              | сент
+            p
+              | Все дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чем здесь подвох!
+      a.news__to-all.btn.btn--ghost(href='#')
         | Показать все
-  secton.reviews
+  section.reviews
     .reviews__wrapper.slider
       div
         h2.reviews__title
           | Отзывы о нас
-        a.reviews__write.btn(href='#')
+        a.reviews__write.btn.btn--ghost(href='#')
           | Оставить свой
       input.slider__input(type='radio', name='reviews', id='reviews-input-1', checked)
       input.slider__input(type='radio', name='reviews', id='reviews-input-2')
@@ -129,21 +132,21 @@ block content
         blockquote.reviews__item.slider__item
           .reviews__author-foto
             img(src='http://via.placeholder.com/50x49', width='50', height='49', alt='Фото Трэвиса Баркера')
-          cite.reviews__athor-name
+          cite.reviews__author-name
             | Трэвис Баркер
           p
             | Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
         blockquote.reviews__item.slider__item
           .reviews__author-foto
             img(src='http://via.placeholder.com/50x49', width='50', height='49', alt='Фото Трэвиса Баркера')
-          cite.reviews__athor-name
+          cite.reviews__author-name
             | Трэвис Баркер
           p
             | Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
         blockquote.reviews__item.slider__item
           .reviews__author-foto
             img(src='http://via.placeholder.com/50x49', width='50', height='49', alt='Фото Трэвиса Баркера')
-          cite.reviews__athor-name
+          cite.reviews__author-name
             | Трэвис Баркер
           p
             | Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!

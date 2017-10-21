@@ -1,0 +1,46 @@
+.stats {
+  padding-top: 25px;
+}
+
+.stats__slogan {
+  text-align: center;
+  display: block;
+  font-size: $font-size--xx-large;
+  text-transform: uppercase;
+}
+
+.stats__intro {
+  text-align: center;
+  font-size: $font-size--large;
+}
+
+.stats__legend {
+  text-align: center;
+  display: block;
+  font-size: $font-size--large;
+  &--top {
+    display: none;
+  }
+}
+
+.stats__items {
+  border-collapse: collapse;
+  width: 100%;
+  tr {
+    background-color: $gray--light;
+    color: white;
+  }
+  td {
+    padding: 10px;
+  }
+}
+
+.stats__value {
+  font-size: $font-size--xxx-large;
+  font-weight: bold;
+}
+
+.stats__field {
+  font-size: $font-size--large;
+  color: $brown--lightest;
+}

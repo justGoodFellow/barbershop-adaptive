@@ -1,0 +1,37 @@
+.work {
+  background-color: $brown--lighten;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.work__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: $font-size--xx-large;
+}
+
+.work__to-main {
+  display: none;
+}
+
+.work__item-best {
+  font-size: $font-size--large;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  background-color: $brown--dark;
+}
+
+.work__item-name {
+  font-size: $font-size--x-large;
+}
+
+.work__item-review {
+  font-size: $font-size--regular;
+}
+
+.work__item-done {
+  font-size: $font-size--small;
+  text-transform: uppercase;
+  margin-right: 10px;
+}

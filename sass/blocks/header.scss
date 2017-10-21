@@ -1,0 +1,50 @@
+.page-header {
+  background-color: $gray--darkest;
+  color: white;
+}
+
+.page-header__logo {
+  a {
+    display: block;
+    padding-top: 29px;
+    padding-bottom: 26px;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.main-nav {
+  font-size: $font-size--regular;
+}
+
+.main-nav__toggle {
+  display: none;
+}
+
+.main-nav__items,
+.main-nav__user-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.main-nav__items {
+  text-transform: uppercase;
+}
+
+.main-nav__item,
+.main-nav__user-item {
+  a {
+    color: white;
+    text-decoration: none;
+    background-color: $brown--dark;
+    display: block;
+    padding: 10px;
+  }
+}
+
+.main-nav__link {
+  font-weight: bold;
+}

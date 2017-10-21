@@ -1,0 +1,22 @@
+.btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  font-weight: bold;
+  font-size: $font-size--regular;
+  font-family: $font-family;
+  padding: 10px 15px;
+  color: white;
+  background-color: $brown--dark;
+  border: none;
+  &--ghost {
+    background-color: $brown--lighten;
+    color: black;
+    border: 1px solid $brown--light;
+  }
+  &--dark {
+    background-color: $gray--dark;
+    border: 1px solid $gray--light;
+  }
+}

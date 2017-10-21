@@ -1,0 +1,32 @@
+.news {
+  padding-top: 10px;
+  padding-bottom: 30px;
+  background-color: $brown--lighten;
+  border-bottom: 1px solid $brown--light;
+}
+
+.news__title {
+  text-align: center;
+  font-size: $font-size--xx-large;
+  text-transform: uppercase;
+}
+
+.news__items {
+  list-style: none;
+  padding: 0;
+}
+
+.news__item-link {
+  text-decoration: none;
+  color: black;
+  p {
+    font-size: $font-size--regular;;
+  }
+}
+
+.news__date {
+  font-size: $font-size--small;
+  b {
+    font-size: $font-size--xx-large;
+  }
+}

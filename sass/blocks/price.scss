@@ -1,0 +1,12 @@
+.price {
+  background-color: $gray;
+  color: white;
+  padding: 10px 0;
+  font-size: $font-size--large;
+}
+
+.price__title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: $font-size--xx-large;
+}

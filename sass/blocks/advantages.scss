@@ -1,0 +1,22 @@
+.advantages {
+  padding: 10px 0;
+  background-color: $gray--darkest;
+  color: $brown--lightest;
+  text-align: center;
+}
+
+.advantages__items {
+  list-style: none;
+  padding: 0;
+}
+
+.advantages__item {
+  p {
+    font-size: $font-size--large;
+  }
+}
+
+.advantages__item-title {
+  font-size: $font-size--xx-large;
+  text-transform: uppercase;
+}

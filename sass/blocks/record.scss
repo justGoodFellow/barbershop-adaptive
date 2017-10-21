@@ -1,0 +1,41 @@
+.record {
+  padding-top: 10px;
+  padding-bottom: 30px;
+  background-color: $brown--lighten;
+}
+
+.record__title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: $font-size--xx-large;
+}
+
+.record__write {
+  display: none;
+}
+
+.record__form-data input,
+.record__form-data textarea {
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 5px 0;
+  font-size: $font-size--regular;
+  font-family: $font-family;
+}
+
+.record__form-title {
+  font-weight: normal;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: $font-size--large;
+}
+
+.record__form-model label {
+  font-size: $font-size--regular;
+}
+
+.record__form-extra label {
+  display: block;
+  font-size: $font-size--regular;
+}
