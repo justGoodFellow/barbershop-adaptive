@@ -1,9 +1,11 @@
 .page-footer {
   padding: 10px 0;
-  background-color: $gray--dark;
-  color: white;
+
   font-size: $font-size--regular;
   text-align: center;
+  color: white;
+
+  background-color: $gray--dark;
 }
 
 .page-footer__contacts-hidden {

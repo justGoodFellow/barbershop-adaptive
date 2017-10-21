@@ -1,13 +1,14 @@
 .reviews {
   padding-top: 10px;
   padding-bottom: 30px;
+
   background-color: $brown--lighten;
 }
 
 .reviews__title {
+  font-size: $font-size--xx-large;
   text-align: center;
   text-transform: uppercase;
-  font-size: $font-size--xx-large;
 }
 
 .reviews__write {
@@ -17,12 +18,12 @@
 .reviews__item {
   margin: 0;
   p {
-    font-size: $font-size--regular
+    font-size: $font-size--regular;
   }
 }
 
 .reviews__author-name {
   font-weight: bold;
-  font-style: normal;
   font-size: $font-size--x-large;
+  font-style: normal;
 }

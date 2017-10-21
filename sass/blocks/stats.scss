@@ -3,32 +3,36 @@
 }
 
 .stats__slogan {
-  text-align: center;
   display: block;
+
   font-size: $font-size--xx-large;
+  text-align: center;
   text-transform: uppercase;
 }
 
 .stats__intro {
-  text-align: center;
   font-size: $font-size--large;
+  text-align: center;
 }
 
 .stats__legend {
-  text-align: center;
   display: block;
+
   font-size: $font-size--large;
+  text-align: center;
   &--top {
     display: none;
   }
 }
 
 .stats__items {
-  border-collapse: collapse;
   width: 100%;
+
+  border-collapse: collapse;
   tr {
-    background-color: $gray--light;
     color: white;
+
+    background-color: $gray--light;
   }
   td {
     padding: 10px;
@@ -36,8 +40,8 @@
 }
 
 .stats__value {
-  font-size: $font-size--xxx-large;
   font-weight: bold;
+  font-size: $font-size--xxx-large;
 }
 
 .stats__field {

@@ -1,13 +1,16 @@
 .advantages {
   padding: 10px 0;
-  background-color: $gray--darkest;
-  color: $brown--lightest;
+
   text-align: center;
+  color: $brown--lightest;
+
+  background-color: $gray--darkest;
 }
 
 .advantages__items {
-  list-style: none;
   padding: 0;
+
+  list-style: none;
 }
 
 .advantages__item {

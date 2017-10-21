@@ -1,13 +1,14 @@
 .record {
   padding-top: 10px;
   padding-bottom: 30px;
+
   background-color: $brown--lighten;
 }
 
 .record__title {
-  text-transform: uppercase;
-  text-align: center;
   font-size: $font-size--xx-large;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .record__write {
@@ -16,19 +17,20 @@
 
 .record__form-data input,
 .record__form-data textarea {
-  padding: 5px;
-  width: 100%;
   box-sizing: border-box;
+  width: 100%;
   margin: 5px 0;
+  padding: 5px;
+
   font-size: $font-size--regular;
   font-family: $font-family;
 }
 
 .record__form-title {
   font-weight: normal;
-  text-transform: uppercase;
-  text-align: center;
   font-size: $font-size--large;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .record__form-model label {
@@ -37,5 +39,6 @@
 
 .record__form-extra label {
   display: block;
+
   font-size: $font-size--regular;
 }
