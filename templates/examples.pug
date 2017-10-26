@@ -3,14 +3,14 @@ extend ./layouts/base.pug
 block content
   section.work
     .work__wrapper
-      div
+      .work__header
         h2.work__title
           | Наши работы
         a.work__to-main.btn.btn--ghost(href='index.html')
           | На главную
       .work__items
         .work__item.work__item--big
-          .work__item-photo.work__item-photo--big
+          .work__item-photo
             img(src='img/photo-1--big.jpg', width='280', height='480', alt='Лжепётр Мчиславский')
             span.work__item-best
               | Работа месяца
@@ -19,12 +19,12 @@ block content
               | Лжепётр Мчиславский
             p.work__item-review
               | Где я только ни стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и до скорого!
-            div
-              span.work__item-done.work__item-done--clip
+            .work__item-services
+              span.work__item-service.work__item-service--clip
                 | Стрижка
-              span.work__item-done.work__item-done--beard
+              span.work__item-service.work__item-service--beard
                 | Бритье
-              span.work__item-done.work__item-done--mustache
+              span.work__item-service.work__item-service--mustache
                 | Усы
         .work__item
           .work__item-photo
@@ -34,8 +34,8 @@ block content
               | Саша Мальцев
             p.work__item-review
               | Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?
-            div
-              span.work__item-done.work__item-done--clip
+            .work__item-services
+              span.work__item-service.work__item-service--clip
                 | Стрижка
         .work__item
           .work__item-photo
@@ -45,10 +45,10 @@ block content
               | Владимир Иваныч
             p.work__item-review
               | К зимнему сезону — готов!
-            div
-              span.work__item-done.work__item-done--beard
+            .work__item-services
+              span.work__item-service.work__item-service--beard
                 | Борода
-              span.work__item-done.work__item-done--mustache
+              span.work__item-service.work__item-service--mustache
                 | Усы
         .work__item
           .work__item-photo
@@ -57,15 +57,15 @@ block content
             h3.work__item-name
               | Винстон Синий
             p.work__item-review
-              | Как только заростаю и волосы начинают мешать видеть — бегом в Бородинский!
-            div
-              span.work__item-done.work__item-done--clip
+              | Как только зарастаю и волосы начинают мешать видеть — бегом в Бородинский!
+            .work__item-services
+              span.work__item-service.work__item-service--clip
                 | Стрижка
   section.price
     .price__wrapper
       h2.price__title
         | Прейскурант
-      div
+      .price__content
         table.price__items
           tr
             td.price__item-number
@@ -112,9 +112,8 @@ block content
               | с мытьем головы
             td
               | 1 000 руб.
-        div
-          img(src='http://via.placeholder.com/57x58', width='58', height='57', alt='Время')
-          span
-            | С 10:00 до 14:00
-            br
-            | Скидка 20%
+        span.price__discount
+          | С 10:00 до 14:00
+          br
+          |
+          | скидка 20%

@@ -1,18 +1,84 @@
 .stats {
-  padding-top: 25px;
+  @include container;
+}
+
+@media #{$tablet-width} {
+  .stats {
+    margin-top: -184px;
+  }
+}
+
+@media #{$desktop-width} {
+  .stats {
+    display: flex;
+    margin-top: -159px;
+  }
+}
+
+.stats__header {
+  padding: 30px 38px 10px 38px;
+
+  text-align: center;
+
+  background-color: white;
+}
+
+@media #{$tablet-width} {
+  .stats__header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    box-sizing: border-box;
+    height: 184px;
+    padding: 30px 0;
+    overflow: hidden;
+
+    text-align: left;
+  }
+}
+
+@media #{$desktop-width} {
+  .stats__header {
+    flex-direction: column;
+    width: 320px;
+    height: auto;
+    padding-right: 60px;
+    padding-left: 40px;
+  }
 }
 
 .stats__slogan {
   display: block;
 
   font-size: $font-size--xx-large;
-  text-align: center;
   text-transform: uppercase;
+}
+
+@media #{$tablet-width} {
+  .stats__slogan {
+    font-size: $font-size--xxx-large;
+    text-transform: none;
+  }
 }
 
 .stats__intro {
   font-size: $font-size--large;
-  text-align: center;
+}
+
+@media #{$tablet-width} {
+  .stats__intro {
+    flex-basis: 50%;
+    box-sizing: border-box;
+    padding-right: 82px;
+    padding-left: 32px;
+  }
+}
+
+@media #{$desktop-width} {
+  .stats__intro {
+    flex-basis: auto;
+    padding: 0;
+  }
 }
 
 .stats__legend {
@@ -20,8 +86,21 @@
 
   font-size: $font-size--large;
   text-align: center;
+
+  opacity: 0.3;
   &--top {
     display: none;
+  }
+}
+
+@media #{$tablet-width} {
+  .stats__legend {
+    &--top {
+      display: block;
+    }
+    &--bottom {
+      display: none;
+    }
   }
 }
 
@@ -39,12 +118,33 @@
   }
 }
 
+@media #{$desktop-width} {
+  .stats__items {
+    width: 640px;
+  }
+}
+
 .stats__value {
   font-weight: bold;
   font-size: $font-size--xxx-large;
 }
 
+@media #{$tablet-width} {
+  .stats__value {
+    font-size: 72px;
+  }
+}
+
 .stats__field {
-  font-size: $font-size--large;
+  font-size: $font-size--regular;
   color: $brown--lightest;
+}
+
+@media #{$tablet-width} {
+  .stats__field {
+    font-size: $font-size--large;
+    br {
+      display: none;
+    }
+  }
 }
