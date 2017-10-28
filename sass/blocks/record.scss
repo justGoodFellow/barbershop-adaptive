@@ -141,15 +141,59 @@
 .record__form-model-wrapper {
   display: flex;
   flex-wrap: wrap;
+  div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    min-width: 64px;
+    margin: 0 10px;
+    margin-top: 30px;
+    padding-bottom: 65px;
+
+    background-repeat: no-repeat;
+    background-position: center 35px;
+    &:nth-child(1) {
+      background-image: url('../img/icon-beard-1.svg');
+      background-size: 52px 49px;
+    }
+    &:nth-child(2) {
+      padding-bottom: 80px;
+
+      background-image: url('../img/icon-beard-2.svg');
+      background-size: 58px 68px;
+    }
+    &:nth-child(3) {
+      padding-bottom: 90px;
+
+      background-image: url('../img/icon-beard-3.svg');
+      background-size: 64px 78px;
+    }
+    &:nth-child(4) {
+      padding-bottom: 110px;
+
+      background-image: url('../img/icon-beard-4.svg');
+      background-size: 58px 98px;
+    }
+    &:nth-child(5) {
+      padding-bottom: 120px;
+
+      background-image: url('../img/icon-beard-5.svg');
+      background-size: 64px 105px;
+    }
+  }
 }
 
-// @media #{$desktop-width} {
-//   .record__form-model-wrapper {
-//     div {
-//       width: 160px;
-//     }
-//   }
-// }
+@media #{$tablet-width} {
+  .record__form-model-wrapper {
+    justify-content: space-around;
+    div {
+      padding-bottom: 135px;
+
+      background-position: center 65px;
+    }
+  }
+}
 
 .record__form-extra {
   margin: 30px 0;
