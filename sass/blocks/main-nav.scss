@@ -47,36 +47,30 @@
   }
 }
 
-.main-nav__item,
-.main-nav__user-item {
-  a {
-    display: block;
-    padding: 15px 20px;
+.main-nav__link,
+.main-nav__user-login {
+  display: block;
+  padding: 15px 20px;
 
-    color: white;
-    text-decoration: none;
-  }
+  color: white;
+  text-decoration: none;
 }
 
 @media #{$tablet-width} {
-  .main-nav__item,
-  .main-nav__user-item {
-    a {
-      padding: 25px 15px;
+  .main-nav__link,
+  .main-nav__user-login {
+    padding: 25px 15px;
 
-      color: white;
+    color: white;
 
-      background-color: black;
-    }
+    background-color: black;
   }
 }
 
 @media #{$desktop-width} {
-  .main-nav__item,
-  .main-nav__user-item {
-    a {
-      padding: 25px 30px;
-    }
+  .main-nav__link,
+  .main-nav__user-login {
+    padding: 25px 30px;
   }
 }
 
@@ -94,5 +88,29 @@
 }
 
 .main-nav__user-login {
+  padding-left: 50px;
+
   background-color: $brown--darkest;
+  background-image: url('../img/icon-login.png');
+  background-repeat: no-repeat;
+  background-position: 20px center;
+}
+
+@media #{$tablet-width} {
+  .main-nav__user-login {
+    font-size: 0;
+    width: 65px;
+    height: 100%;
+    box-sizing: border-box;
+  }
+}
+
+@media #{$desktop-width} {
+  .main-nav__user-login {
+    text-transform: uppercase;
+    width: auto;
+    font-weight: bold;
+    background-position: left center;
+    font-size: $font-size--regular;
+  }
 }

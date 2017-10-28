@@ -199,9 +199,29 @@
 
 .work__item-service {
   margin: 5px 0;
-  margin-right: 5px;
+  margin-right: 20px;
+  padding: 5px 0;
   padding-left: 35px;
 
   font-size: $font-size--small;
   text-transform: uppercase;
+
+  background-repeat: no-repeat;
+  background-position: center left;
+  &--clip {
+    background-image: url('../img/icon-scissors.svg');
+    background-size: 21px 20px;
+  }
+  &--beard {
+    padding-left: 45px;
+
+    background-image: url('../img/icon-beard-1.svg');
+    background-size: 23px 21px;
+  }
+  &--mustache {
+    padding-left: 60px;
+
+    background-image: url('../img/icon-mustache.svg');
+    background-size: 42px 12px;
+  }
 }

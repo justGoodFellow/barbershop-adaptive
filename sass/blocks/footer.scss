@@ -91,6 +91,13 @@
 @media #{$tablet-width} {
   .page-footer__social {
     order: 3;
+    width: 100%;
+  }
+}
+
+@media #{$desktop-width} {
+  .page-footer__social {
+    width: auto;
   }
 }
 

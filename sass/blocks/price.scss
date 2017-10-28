@@ -57,6 +57,10 @@
   margin: 10px 0;
   padding: 20px 45px 20px 110px;
 
+  background-image: url('../img/icon-clock.svg');
+  background-repeat: no-repeat;
+  background-position: 20px center;
+  background-size: 58px 57px;
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -68,6 +72,9 @@
     font-weight: bold;
     font-size: $font-size--xx-large;
     text-transform: uppercase;
+
+    background-position: 30px center;
+    background-size: 72px 71px;
     br {
       display: none;
     }
@@ -79,7 +86,9 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    box-sizing: border-box;
     width: 270px;
+    min-height: 276px;
     margin: 0;
     padding: 0;
     padding-bottom: 24px;
@@ -88,6 +97,9 @@
     font-size: $font-size--large;
     text-align: center;
     text-transform: none;
+
+    background-position: center 35px;
+    background-size: 142px 139px;
     br {
       display: inline;
     }

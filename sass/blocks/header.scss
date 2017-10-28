@@ -3,8 +3,6 @@
   flex-direction: column;
 
   color: white;
-
-  background-color: $gray--dark;
 }
 
 @media #{$tablet-width} {
@@ -14,6 +12,7 @@
 }
 
 .page-header__logo {
+  background-color: $gray--darkest;
   a {
     display: block;
     padding-top: 29px;
@@ -29,11 +28,20 @@
   .page-header__logo {
     height: 397px;
     overflow: hidden;
+
+    background-color: $gray--dark;
+    background-image: url('../img/hero-tablet.jpg');
+    background-repeat: no-repeat;
+    background-position: center -70px;
+    background-size: cover;
   }
 }
 
 @media #{$desktop-width} {
   .page-header__logo {
     height: 648px;
+
+    background-image: url('../img/hero-desktop.jpg');
+    background-position: center;
   }
 }
