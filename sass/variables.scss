@@ -6,6 +6,7 @@ $brown--dark: #826550;
 $brown--darken: #755a46;
 $brown--darkest: #6a4d38;
 
+$gray--lighten: #545454;
 $gray--light: #3f3f3f;
 $gray: #353535;
 $gray--dark: #292929;
@@ -24,5 +25,6 @@ $font-size--xxx-large: 40px;
 $font-family: 'PT Sans Narrow', sans-serif;
 
 
+$mobile-width-only: '(max-width: 767px)';
 $tablet-width: '(min-width: 768px)';
 $desktop-width: '(min-width: 1200px)';

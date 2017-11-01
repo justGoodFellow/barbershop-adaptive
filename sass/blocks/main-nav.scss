@@ -1,4 +1,6 @@
 .main-nav {
+  position: relative;
+
   font-size: $font-size--regular;
 }
 
@@ -8,8 +10,139 @@
   }
 }
 
-.main-nav__toggle {
-  display: none;
+@media #{$mobile-width-only} {
+  .main-nav__toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 70px;
+    height: 50px;
+
+    font-size: 0;
+
+    background-color: $brown--darkest;
+    border: none;
+  }
+
+  .main-nav {
+    &--closed {
+      .main-nav__toggle {
+        &::before {
+          content: '';
+          position: absolute;
+          top: 15px;
+          left: 17px;
+
+          display: block;
+          width: 36px;
+          height: 2px;
+
+          background-color: white;
+          box-shadow: 0 8px 0 white, 0 16px 0 white;
+        }
+      }
+      .main-nav__item {
+        display: none;
+        &--active {
+          display: block;
+          .main-nav__link {
+            padding-right: 70px;
+            padding-left: 70px;
+
+            text-align: center;
+          }
+        }
+      }
+      .main-nav__user-items {
+        display: none;
+      }
+    }
+
+    &--opened {
+      .main-nav__wrapper {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 70px;
+        z-index: 1;
+
+        width: auto;
+        min-height: 568px;
+
+        background-color: $brown--darkest;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+
+          display: block;
+          width: 8px;
+          height: 100%;
+
+          box-shadow: inset 4px 0 7px -2px rgba(black, 0.3);
+        }
+      }
+      .main-nav__toggle {
+        top: 0;
+        right: auto;
+        left: 0;
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          top: 24px;
+          left: 18px;
+
+          display: block;
+          width: 36px;
+          height: 2px;
+
+          background-color: white;
+        }
+        &::before {
+          transform: rotate(45deg);
+        }
+        &::after {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    &--nojs {
+      .main-nav__toggle {
+        display: none;
+      }
+      .main-nav__wrapper {
+        position: static;
+
+        min-height: auto;
+        &::before {
+          box-shadow: none;
+        }
+        .main-nav__item,
+        .main-nav__user-items {
+          display: block;
+        }
+        .main-nav__item {
+          &--active {
+            .main-nav__link {
+              padding-right: 20px;
+              padding-left: 20px;
+
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media #{$tablet-width} {
+  .main-nav__toggle {
+    display: none;
+  }
 }
 
 .main-nav__wrapper {
@@ -71,6 +204,17 @@
   .main-nav__link,
   .main-nav__user-login {
     padding: 25px 30px;
+    &:hover,
+    &:focus {
+      color: black;
+
+      background-color: white;
+    }
+    &:active {
+      color: rgba(black, 0.3);
+
+      background-color: white;
+    }
   }
 }
 
@@ -79,38 +223,81 @@
 
   background-color: $brown--dark;
   box-shadow: inset 0 -1px 0 #71543f, inset 0 1px 0 #886e5b;
+  &:active {
+    color: rgba(white, 0.3);
+
+    background-color: $brown--darkest;
+    box-shadow: none;
+  }
 }
 
 @media #{$tablet-width} {
   .main-nav__link {
     box-shadow: none;
+    &:hover,
+    &:focus {
+      color: $brown--dark;
+    }
+    &:active {
+      background-color: black;
+    }
   }
 }
 
 .main-nav__user-login {
-  padding-left: 50px;
+  display: flex;
 
   background-color: $brown--darkest;
-  background-image: url('../img/icon-login.png');
-  background-repeat: no-repeat;
-  background-position: 20px center;
+  &::before {
+    content: '';
+
+    display: block;
+    width: 19px;
+    height: 19px;
+    margin-right: 10px;
+
+    background-image: url('../img/icon-login.png');
+    background-repeat: no-repeat;
+    background-position: center left;
+  }
 }
 
 @media #{$tablet-width} {
   .main-nav__user-login {
-    font-size: 0;
+    justify-content: center;
+    box-sizing: border-box;
     width: 65px;
     height: 100%;
-    box-sizing: border-box;
+
+    font-size: 0;
+    &::before {
+      margin: 0;
+    }
+    &:hover,
+    &:focus {
+      &::before {
+        background-image: url('../img/icon-login--brown.png');
+      }
+    }
   }
 }
 
 @media #{$desktop-width} {
   .main-nav__user-login {
-    text-transform: uppercase;
     width: auto;
+
     font-weight: bold;
-    background-position: left center;
     font-size: $font-size--regular;
+    text-transform: uppercase;
+
+    background-position: left center;
+    &::before {
+      margin-right: 15px;
+    }
+    &:hover,
+    &:focus {
+      &::before {
+      }
+    }
   }
 }

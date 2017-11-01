@@ -11,17 +11,42 @@
 
   font-size: 0;
 
-  background-repeat: no-repeat;
-  background-position: center;
   border: 1px solid $gray--light;
+  &:hover,
+  &:focus {
+    border-color: $gray--lighten;
+  }
+  &:active {
+    background-color: $gray--darken;
+    border-color: $gray--darken;
+    &::after {
+      opacity: 0.3;
+    }
+  }
+  &::after {
+    content: '';
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background-repeat: no-repeat;
+    background-position: center;
+  }
   &--vk {
-    background-image: url('../img/icon-vk.png');
+    &::after {
+      background-image: url('../img/icon-vk.png');
+    }
   }
   &--fb {
-    background-image: url('../img/icon-fb.png');
+    &::after {
+      background-image: url('../img/icon-fb.png');
+    }
   }
   &--in {
-    background-image: url('../img/icon-in.png');
+    &::after {
+      background-image: url('../img/icon-in.png');
+    }
   }
 }
 
@@ -37,16 +62,22 @@
     height: 50px;
     margin: 5px;
     &--vk {
-      background-image: url('../img/icon-vk.png');
-      background-size: 15px 17px;
+      &::after {
+        background-image: url('../img/icon-vk.png');
+        background-size: 15px 17px;
+      }
     }
     &--fb {
-      background-image: url('../img/icon-fb.png');
-      background-size: 10px 21px;
+      &::after {
+        background-image: url('../img/icon-fb.png');
+        background-size: 10px 21px;
+      }
     }
     &--in {
-      background-image: url('../img/icon-in.png');
-      background-size: 19px;
+      &::after {
+        background-image: url('../img/icon-in.png');
+        background-size: 19px;
+      }
     }
   }
 }

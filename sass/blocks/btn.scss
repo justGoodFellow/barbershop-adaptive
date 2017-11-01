@@ -17,9 +17,28 @@
 
     background-color: $brown--lighten;
     border: 1px solid $brown--light;
+    &:hover,
+    &:focus {
+      border-color: $brown;
+    }
+    &:active {
+      color: rgba(black, 0.3);
+
+      background-color: $brown;
+    }
   }
   &--dark {
     background-color: $gray--dark;
     border: 1px solid $gray--light;
+    &:hover,
+    &:focus {
+      border-color: $gray--lighten;
+    }
+    &:active {
+      color: rgba(white, 0.3);
+
+      background-color: $gray--darken;
+      border-color: $gray--darken;
+    }
   }
 }

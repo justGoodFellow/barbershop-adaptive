@@ -51,7 +51,6 @@
 
 .news__item {
   padding: 20px 0;
-  padding-right: 40px;
   &:nth-child(n+3) {
     display: none;
   }
@@ -64,6 +63,7 @@
   .news__item {
     box-sizing: border-box;
     width: 320px;
+    padding-right: 40px;
     &:first-child {
       border: none;
     }
@@ -84,6 +84,26 @@
 
   color: black;
   text-decoration: none;
+  &:hover,
+  &:focus {
+    .news__date {
+      background-color: $brown--dark;
+    }
+    p {
+      color: $brown--dark;
+      text-decoration: underline;
+    }
+  }
+  &:active {
+    .news__date {
+      color: rgba(white, 0.3);
+
+      background-color: $brown--darkest;
+    }
+    p {
+      color: $brown--darkest;
+    }
+  }
   p {
     margin: 0;
 
