@@ -1,19 +1,20 @@
-@import 'normalize.scss';
-@import 'variables.scss';
-@import 'mixins.scss';
-
-@import 'global/fonts.scss';
-@import 'global/layout.scss';
-
-@import 'blocks/btn.scss';
-@import 'blocks/social-links.scss';
-@import 'blocks/header.scss';
-@import 'blocks/main-nav';
-@import 'blocks/advantages.scss';
-@import 'blocks/news.scss';
-@import 'blocks/price.scss';
-@import 'blocks/record.scss';
-@import 'blocks/reviews.scss';
-@import 'blocks/stats.scss';
-@import 'blocks/work.scss';
-@import 'blocks/footer.scss';
+@import 'helpers/variables.scss';
+@import 'helpers/mixins.scss';
+//
+@import 'base/normalize.scss';
+@import 'base/fonts.scss';
+@import 'base/base.scss';
+//
+@import 'layouts/page-header.scss';
+@import 'layouts/page-footer.scss';
+//
+@import 'components/btn.scss';
+@import 'components/social-links.scss';
+@import 'components/main-nav';
+@import 'components/advantages.scss';
+@import 'components/news.scss';
+@import 'components/price.scss';
+@import 'components/record.scss';
+@import 'components/reviews.scss';
+@import 'components/stats.scss';
+@import 'components/work.scss';

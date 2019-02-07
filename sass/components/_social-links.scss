@@ -12,17 +12,21 @@
   font-size: 0;
 
   border: 1px solid $gray--light;
+
   &:hover,
   &:focus {
     border-color: $gray--lighten;
   }
+
   &:active {
     background-color: $gray--darken;
     border-color: $gray--darken;
+
     &::after {
       opacity: 0.3;
     }
   }
+
   &::after {
     content: '';
 
@@ -33,16 +37,19 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+
   &--vk {
     &::after {
       background-image: url('../img/icon-vk.png');
     }
   }
+
   &--fb {
     &::after {
       background-image: url('../img/icon-fb.png');
     }
   }
+
   &--in {
     &::after {
       background-image: url('../img/icon-in.png');
@@ -61,18 +68,21 @@
     width: 50px;
     height: 50px;
     margin: 5px;
+
     &--vk {
       &::after {
         background-image: url('../img/icon-vk.png');
         background-size: 15px 17px;
       }
     }
+
     &--fb {
       &::after {
         background-image: url('../img/icon-fb.png');
         background-size: 10px 21px;
       }
     }
+
     &--in {
       &::after {
         background-image: url('../img/icon-in.png');

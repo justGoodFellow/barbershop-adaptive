@@ -78,6 +78,7 @@
     textarea {
       margin: 15px 0;
     }
+
     textarea {
       height: 210px;
     }
@@ -93,6 +94,7 @@
 @media #{$desktop-width} {
   .record__form-name {
     justify-content: space-between;
+
     input {
       width: 295px;
     }
@@ -103,6 +105,7 @@
   .record__form-contacts {
     display: flex;
     justify-content: space-between;
+
     input {
       width: 460px;
     }
@@ -124,6 +127,7 @@
 
 .record__form-model {
   margin: 30px 0;
+
   label {
     font-size: $font-size--regular;
     text-transform: lowercase;
@@ -141,6 +145,7 @@
 .record__form-model-wrapper {
   display: flex;
   flex-wrap: wrap;
+
   div {
     display: flex;
     flex-direction: column;
@@ -153,28 +158,33 @@
 
     background-repeat: no-repeat;
     background-position: center 35px;
+
     &:nth-child(1) {
       background-image: url('../img/icon-beard-1.svg');
       background-size: 52px 49px;
     }
+
     &:nth-child(2) {
       padding-bottom: 80px;
 
       background-image: url('../img/icon-beard-2.svg');
       background-size: 58px 68px;
     }
+
     &:nth-child(3) {
       padding-bottom: 90px;
 
       background-image: url('../img/icon-beard-3.svg');
       background-size: 64px 78px;
     }
+
     &:nth-child(4) {
       padding-bottom: 110px;
 
       background-image: url('../img/icon-beard-4.svg');
       background-size: 58px 98px;
     }
+
     &:nth-child(5) {
       padding-bottom: 120px;
 
@@ -187,6 +197,7 @@
 @media #{$tablet-width} {
   .record__form-model-wrapper {
     justify-content: space-around;
+
     div {
       padding-bottom: 135px;
 
@@ -197,6 +208,7 @@
 
 .record__form-extra {
   margin: 30px 0;
+
   label {
     display: block;
 
@@ -208,9 +220,11 @@
   .record__form-extra-wrapper {
     display: flex;
     flex-wrap: wrap;
+
     div {
       width: 320px;
     }
+
     label {
       font-size: $font-size--x-large;
     }

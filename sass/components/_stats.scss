@@ -88,9 +88,11 @@
 
   font-size: $font-size--large;
   text-align: center;
+
   &--top {
     display: none;
   }
+
   &--bottom {
     padding-top: 15px;
 
@@ -105,6 +107,7 @@
     &--top {
       display: block;
     }
+
     &--bottom {
       display: none;
     }
@@ -115,6 +118,7 @@
   width: 100%;
 
   border-collapse: collapse;
+
   tr {
     display: flex;
     justify-content: space-between;
@@ -123,15 +127,19 @@
     color: white;
 
     background-color: $gray--light;
+
     &:nth-child(1) {
       background-color: #404040;
     }
+
     &:nth-child(2) {
       background-color: #4e4e4e;
     }
+
     &:nth-child(3) {
       background-color: $gray;
     }
+
     &:nth-child(4) {
       background-color: #404040;
     }
@@ -164,6 +172,7 @@
 @media #{$tablet-width} {
   .stats__field {
     font-size: $font-size--large;
+
     br {
       display: none;
     }

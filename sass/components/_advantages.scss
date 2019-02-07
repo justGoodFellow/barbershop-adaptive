@@ -59,17 +59,21 @@
   background-repeat: no-repeat;
   background-position: center top;
   background-size: 95px 94px;
+
   &:nth-child(2) {
     background-image: url('../img/icon-advantages-2.svg');
     background-size: 95px 88px;
   }
+
   &:nth-child(3) {
     background-image: url('../img/icon-advantages-3.svg');
     background-size: 95px 91px;
   }
+
   &:nth-child(n+2) {
     display: none;
   }
+
   p {
     font-size: $font-size--large;
   }
@@ -81,6 +85,7 @@
     padding-left: 130px;
 
     background-position: center left;
+
     &:nth-child(n+2) {
       display: block;
     }
