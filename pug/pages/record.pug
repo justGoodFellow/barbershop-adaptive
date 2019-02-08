@@ -11,12 +11,12 @@ block content
       form.record__form
         .record__form-data
           .record__form-name
-            input(type='text', placeholder='Фамилия')
-            input(type='text', placeholder='Имя')
-            input(type='text', placeholder='Отчество')
+            input(type='text' placeholder='Фамилия')
+            input(type='text' placeholder='Имя')
+            input(type='text' placeholder='Отчество')
           .record__form-contacts
-            input(type='tel', placeholder='Контактный телефон')
-            input(type='email', placeholder='Контактный e-mail')
+            input(type='tel' placeholder='Контактный телефон')
+            input(type='email' placeholder='Контактный e-mail')
           div
             textarea(placeholder='Доп. информация для мастера')
         .record__form-model
@@ -24,23 +24,23 @@ block content
             | Выберите модель бороды:
           .record__form-model-wrapper
             div
-              input(id='admiral', type='radio')
+              input(id='admiral' type='radio')
               label(for='admiral')
                 | Адмирал
             div
-              input(id='woodcutter', type='radio')
+              input(id='woodcutter' type='radio')
               label(for='woodcutter')
                 | Лесоруб
             div
-              input(id='explorer', type='radio')
+              input(id='explorer' type='radio')
               label(for='explorer')
                 | Полярник
             div
-              input(id='boyar', type='radio')
+              input(id='boyar' type='radio')
               label(for='boyar')
                 | Боярин
             div
-              input(id='sage', type='radio')
+              input(id='sage' type='radio')
               label(for='sage')
                 | Мудрец
         .record__form-extra
@@ -48,27 +48,27 @@ block content
             | Дополнительные услуги:
           .record__form-extra-wrapper
             div
-              input(id='coloring-beard', type='checkbox', checked)
+              input(id='coloring-beard' type='checkbox' checked)
               label(for='coloring-beard')
                 | Подкрасить бороду
             div
-              input(id='screw-mustache', type='checkbox', checked)
+              input(id='screw-mustache' type='checkbox' checked)
               label(for='screw-mustache')
                 | Накрутить усы
             div
-              input(id='comb-beard', type='checkbox')
+              input(id='comb-beard' type='checkbox')
               label(for='comb-beard')
                 | Причесать бороду
             div
-              input(id='temples', type='checkbox')
+              input(id='temples' type='checkbox')
               label(for='temples')
                 | Подровнять виски
             div
-              input(id='coloring-hair', type='checkbox')
+              input(id='coloring-hair' type='checkbox')
               label(for='coloring-hair')
                 | Убрать седину
             div
-              input(id='polishing', type='checkbox')
+              input(id='polishing' type='checkbox')
               label(for='polishing')
                 | Отполировать лысину
         button.btn.record__send(type='submit')
