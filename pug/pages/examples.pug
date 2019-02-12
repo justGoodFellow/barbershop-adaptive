@@ -1,119 +1,126 @@
-extends ../layouts/base.pug
+doctype html
+html(lang='ru')
+  include ../layouts/head.pug
+  body
+    header.page-header
+      a.page-header__logo
+        span.visually-hidden
+          | Бородинский
+        svg.page-header__logo-img(width='226', height='30')
+          use(xlink:href='img/symbols.svg#logo')
+      nav.main-nav
+        button.main-nav__toggle(type='button')
+          | Открыть меню
+        .main-nav__wrapper
+          ul.main-nav__items
+            li.main-nav__item
+              a.main-nav__link(href='index.html')
+                | Главная
+            li.main-nav__item.main-nav__item--active
+              a.main-nav__link
+                | Наши работы
+            li.main-nav__item
+              a.main-nav__link(href='record.html')
+                | Записаться
+            li.main-nav__item
+              a.main-nav__link(href='#')
+                | Контакты
+            li.main-nav__item
+              a.main-nav__link(href='#')
+                | HTML Academy
+          ul.main-nav__user-items
+            li.main-nav__user-item
+              a.main-nav__user-login(href='#')
+                | Войти
+      section.page-header__login.login
+        h2.login__title
+          | Личный кабинет
+        p.login__description
+          | Введите свой логин и пароль, чтобы войти
+        form.login__form(action='#' method='post')
+          .login__form-group
+            label.visually-hidden(for='login')
+              | Логин
+            input.login__field--login.field(id='login' type='text' placeholder='Логин')
+          .login__form-group
+            label.visually-hidden(for='password')
+              | Пароль
+            input.login__field--password.field(id='password' type='password' placeholder='Пароль')
+          .login__row
+            .checkbox
+              input.checkbox__input(id='remember' type='checkbox')
+              label.checkbox__label(for='remember')
+                | Запомните меня
+            a(href='#')
+              | Я забыл пароль
+          .login__row
+            button.login__submit.btn(type='submit')
+              | Войти
+            button.login__close.btn(type='button')
+              | Закрыть
 
-block content
-  section.work
-    .work__wrapper
-      .work__header
-        h2.work__title
-          | Наши работы
-        a.work__to-main.btn.btn--ghost(href='index.html')
-          | На главную
-      .work__items
-        .work__item.work__item--big
-          .work__item-photo
-            img(src='img/photo-1--big.jpg' width='280' height='480' alt='Лжепётр Мчиславский')
-            span.work__item-best
-              | Работа месяца
-          .work__item-content
-            h3.work__item-name
-              | Лжепётр Мчиславский
-            p.work__item-review
-              | Где я только ни стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и до скорого!
-            .work__item-services
-              span.work__item-service.work__item-service--clip
-                | Стрижка
-              span.work__item-service.work__item-service--beard
-                | Бритье
-              span.work__item-service.work__item-service--mustache
-                | Усы
-        .work__item
-          .work__item-photo
-            img(src='img/photo-2.jpg' width='280' height='176' alt='Саша Мальцев')
-          .work__item-content
-            h3.work__item-name
-              | Саша Мальцев
-            p.work__item-review
-              | Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?
-            .work__item-services
-              span.work__item-service.work__item-service--clip
-                | Стрижка
-        .work__item
-          .work__item-photo
-            img(src='img/photo-3.jpg' width='280' height='176' alt='Владимир Иваныч')
-          .work__item-content
-            h3.work__item-name
-              | Владимир Иваныч
-            p.work__item-review
-              | К зимнему сезону — готов!
-            .work__item-services
-              span.work__item-service.work__item-service--beard
-                | Борода
-              span.work__item-service.work__item-service--mustache
-                | Усы
-        .work__item
-          .work__item-photo
-            img(src='img/photo-4.jpg' width='280' height='176' alt='Винстон Синий')
-          .work__item-content
-            h3.work__item-name
-              | Винстон Синий
-            p.work__item-review
-              | Как только зарастаю и волосы начинают мешать видеть — бегом в Бородинский!
-            .work__item-services
-              span.work__item-service.work__item-service--clip
-                | Стрижка
-  section.price
-    .price__wrapper
-      h2.price__title
-        | Прейскурант
-      .price__content
-        table.price__items
-          tr
-            td.price__item-number
-              | 1
-            td
-              | Классическая стрижка
-            td
-              | с мытьем головы
-            td
-              | 1 500 руб.
-          tr
-            td.price__item-number
-              | 2
-            td
-              | Современный вариант
-            td
-              | с мытьем головы
-            td
-              | 1 500 руб.
-          tr
-            td.price__item-number
-              | 3
-            td
-              | Индивидуальный подход
-            td
-              | с мытьем головы
-            td
-              | 2 000 руб.
-          tr
-            td.price__item-number
-              | 4
-            td
-              | Бритьё бороды
-            td
-              | без мытья
-            td
-              | 500 руб.
-          tr
-            td
-              | 5
-            td
-              | Бритьё головы
-            td
-              | с мытьем головы
-            td
-              | 1 000 руб.
-        span.price__discount
-          | С 10:00 до 14:00
-          br
-          |
-          | скидка 20%
+    main
+      section.work
+        .work__wrapper
+          .work__header
+            h2.work__title
+              | Наши работы
+            a.work__to-main.btn.btn--ghost(href='index.html')
+              | На главную
+          .work__items
+            .work__item.work__item--big
+              .work__item-photo
+                img(src='img/photo-1--big.jpg' width='280' height='480' alt='Лжепётр Мчиславский')
+                span.work__item-best
+                  | Работа месяца
+              .work__item-content
+                h3.work__item-name
+                  | Лжепётр Мчиславский
+                p.work__item-review
+                  | Где я только ни стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и до скорого!
+                .work__item-services
+                  span.work__item-service.work__item-service--clip
+                    | Стрижка
+                  span.work__item-service.work__item-service--beard
+                    | Бритье
+                  span.work__item-service.work__item-service--mustache
+                    | Усы
+            .work__item
+              .work__item-photo
+                img(src='img/photo-2.jpg' width='280' height='176' alt='Саша Мальцев')
+              .work__item-content
+                h3.work__item-name
+                  | Саша Мальцев
+                p.work__item-review
+                  | Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?
+                .work__item-services
+                  span.work__item-service.work__item-service--clip
+                    | Стрижка
+            .work__item
+              .work__item-photo
+                img(src='img/photo-3.jpg' width='280' height='176' alt='Владимир Иваныч')
+              .work__item-content
+                h3.work__item-name
+                  | Владимир Иваныч
+                p.work__item-review
+                  | К зимнему сезону — готов!
+                .work__item-services
+                  span.work__item-service.work__item-service--beard
+                    | Борода
+                  span.work__item-service.work__item-service--mustache
+                    | Усы
+            .work__item
+              .work__item-photo
+                img(src='img/photo-4.jpg' width='280' height='176' alt='Винстон Синий')
+              .work__item-content
+                h3.work__item-name
+                  | Винстон Синий
+                p.work__item-review
+                  | Как только зарастаю и волосы начинают мешать видеть — бегом в Бородинский!
+                .work__item-services
+                  span.work__item-service.work__item-service--clip
+                    | Стрижка
+      include ../components/price-list.pug
+
+    include ../layouts/page-footer.pug
+    script(src='js/concatenated.js')

@@ -1,75 +1,137 @@
-extends ../layouts/base.pug
+doctype html
+html(lang='ru')
+  include ../layouts/head.pug
+  body
+    header.page-header
+      a.page-header__logo
+        span.visually-hidden
+          | Бородинский
+        svg.page-header__logo-img(width='226', height='30')
+          use(xlink:href='img/symbols.svg#logo')
+      nav.main-nav
+        button.main-nav__toggle(type='button')
+          | Открыть меню
+        .main-nav__wrapper
+          ul.main-nav__items
+            li.main-nav__item
+              a.main-nav__link(href='index.html')
+                | Главная
+            li.main-nav__item
+              a.main-nav__link(href='examples.html')
+                | Наши работы
+            li.main-nav__item.main-nav__item--active
+              a.main-nav__link
+                | Записаться
+            li.main-nav__item
+              a.main-nav__link(href='#')
+                | Контакты
+            li.main-nav__item
+              a.main-nav__link(href='#')
+                | HTML Academy
+          ul.main-nav__user-items
+            li.main-nav__user-item
+              a.main-nav__user-login(href='#')
+                | Войти
+      section.page-header__login.login
+        h2.login__title
+          | Личный кабинет
+        p.login__description
+          | Введите свой логин и пароль, чтобы войти
+        form.login__form(action='#' method='post')
+          .login__form-group
+            label.visually-hidden(for='login')
+              | Логин
+            input.login__field--login.field(id='login' type='text' placeholder='Логин')
+          .login__form-group
+            label.visually-hidden(for='password')
+              | Пароль
+            input.login__field--password.field(id='password' type='password' placeholder='Пароль')
+          .login__row
+            .checkbox
+              input.checkbox__input(id='remember' type='checkbox')
+              label.checkbox__label(for='remember')
+                | Запомните меня
+            a(href='#')
+              | Я забыл пароль
+          .login__row
+            button.login__submit.btn(type='submit')
+              | Войти
+            button.login__close.btn(type='button')
+              | Закрыть
 
-block content
-  section.record
-    .record__wrapper
-      .record__content-header
-        h2.record__title
-          | Запись на стрижку
-        a.record__write.btn.btn--ghost(href='index.html')
-          | На главную
-      form.record__form
-        .record__form-data
-          .record__form-name
-            input(type='text' placeholder='Фамилия')
-            input(type='text' placeholder='Имя')
-            input(type='text' placeholder='Отчество')
-          .record__form-contacts
-            input(type='tel' placeholder='Контактный телефон')
-            input(type='email' placeholder='Контактный e-mail')
-          div
-            textarea(placeholder='Доп. информация для мастера')
-        .record__form-model
-          h3.record__form-title
-            | Выберите модель бороды:
-          .record__form-model-wrapper
-            div
-              input(id='admiral' type='radio')
-              label(for='admiral')
-                | Адмирал
-            div
-              input(id='woodcutter' type='radio')
-              label(for='woodcutter')
-                | Лесоруб
-            div
-              input(id='explorer' type='radio')
-              label(for='explorer')
-                | Полярник
-            div
-              input(id='boyar' type='radio')
-              label(for='boyar')
-                | Боярин
-            div
-              input(id='sage' type='radio')
-              label(for='sage')
-                | Мудрец
-        .record__form-extra
-          h3.record__form-title
-            | Дополнительные услуги:
-          .record__form-extra-wrapper
-            div
-              input(id='coloring-beard' type='checkbox' checked)
-              label(for='coloring-beard')
-                | Подкрасить бороду
-            div
-              input(id='screw-mustache' type='checkbox' checked)
-              label(for='screw-mustache')
-                | Накрутить усы
-            div
-              input(id='comb-beard' type='checkbox')
-              label(for='comb-beard')
-                | Причесать бороду
-            div
-              input(id='temples' type='checkbox')
-              label(for='temples')
-                | Подровнять виски
-            div
-              input(id='coloring-hair' type='checkbox')
-              label(for='coloring-hair')
-                | Убрать седину
-            div
-              input(id='polishing' type='checkbox')
-              label(for='polishing')
-                | Отполировать лысину
-        button.btn.record__send(type='submit')
-          | Отправить заявку
+    main
+      section.record
+        .record__wrapper
+          .record__content-header
+            h2.record__title
+              | Запись на стрижку
+            a.record__write.btn.btn--ghost(href='index.html')
+              | На главную
+          form.record__form
+            .record__form-data
+              .record__form-name
+                input(type='text' placeholder='Фамилия')
+                input(type='text' placeholder='Имя')
+                input(type='text' placeholder='Отчество')
+              .record__form-contacts
+                input(type='tel' placeholder='Контактный телефон')
+                input(type='email' placeholder='Контактный e-mail')
+              div
+                textarea(placeholder='Доп. информация для мастера')
+            .record__form-model
+              h3.record__form-title
+                | Выберите модель бороды:
+              .record__form-model-wrapper
+                div
+                  input(id='admiral' type='radio')
+                  label(for='admiral')
+                    | Адмирал
+                div
+                  input(id='woodcutter' type='radio')
+                  label(for='woodcutter')
+                    | Лесоруб
+                div
+                  input(id='explorer' type='radio')
+                  label(for='explorer')
+                    | Полярник
+                div
+                  input(id='boyar' type='radio')
+                  label(for='boyar')
+                    | Боярин
+                div
+                  input(id='sage' type='radio')
+                  label(for='sage')
+                    | Мудрец
+            .record__form-extra
+              h3.record__form-title
+                | Дополнительные услуги:
+              .record__form-extra-wrapper
+                div
+                  input(id='coloring-beard' type='checkbox' checked)
+                  label(for='coloring-beard')
+                    | Подкрасить бороду
+                div
+                  input(id='screw-mustache' type='checkbox' checked)
+                  label(for='screw-mustache')
+                    | Накрутить усы
+                div
+                  input(id='comb-beard' type='checkbox')
+                  label(for='comb-beard')
+                    | Причесать бороду
+                div
+                  input(id='temples' type='checkbox')
+                  label(for='temples')
+                    | Подровнять виски
+                div
+                  input(id='coloring-hair' type='checkbox')
+                  label(for='coloring-hair')
+                    | Убрать седину
+                div
+                  input(id='polishing' type='checkbox')
+                  label(for='polishing')
+                    | Отполировать лысину
+            button.btn.record__send(type='submit')
+              | Отправить заявку
+
+    include ../layouts/page-footer.pug
+    script(src='js/concatenated.js')
