@@ -60,65 +60,69 @@ html(lang='ru')
               | Закрыть
 
     main
-      section.work
-        .work__wrapper
-          .work__header
-            h2.work__title
-              | Наши работы
-            a.work__to-main.btn.btn--ghost(href='index.html')
-              | На главную
-          .work__items
-            .work__item.work__item--big
-              .work__item-photo
+      section.examples
+        .examples__wrapper
+          //- .examples__header
+          h1.examples__title
+            | Наши работы
+          //- a.examples__to-main.btn(href='index.html')
+          //-   | На главную
+          .examples__items
+            .example.example--big
+              .example__photo
                 img(src='img/photo-1--big.jpg' width='280' height='480' alt='Лжепётр Мчиславский')
-                span.work__item-best
+                span.example__best
                   | Работа месяца
-              .work__item-content
-                h3.work__item-name
-                  | Лжепётр Мчиславский
-                p.work__item-review
-                  | Где я только ни стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и до скорого!
-                .work__item-services
-                  span.work__item-service.work__item-service--clip
+              .example__content
+                blockquote.example__blockquote
+                  cite.example__author-quote
+                    | Лжепётр Мчиславский
+                  p.example__review
+                    | Где я только ни стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и до скорого!
+                ul.example__services
+                  li.example__service.example__service--clip
                     | Стрижка
-                  span.work__item-service.work__item-service--beard
+                  li.example__service.example__service--beard
                     | Бритье
-                  span.work__item-service.work__item-service--mustache
+                  li.example__service.example__service--mustache
                     | Усы
-            .work__item
-              .work__item-photo
+            .example
+              .example__photo
                 img(src='img/photo-2.jpg' width='280' height='176' alt='Саша Мальцев')
-              .work__item-content
-                h3.work__item-name
-                  | Саша Мальцев
-                p.work__item-review
-                  | Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?
-                .work__item-services
-                  span.work__item-service.work__item-service--clip
+              .example__content
+                blockquote.example__blockquote
+                  cite.example__author-quote
+                    | Саша Мальцев
+                  p.example__review
+                    | Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?
+                ul.example__services
+                  li.example__service.example__service--clip
                     | Стрижка
-            .work__item
-              .work__item-photo
+            .example
+              .example__photo
                 img(src='img/photo-3.jpg' width='280' height='176' alt='Владимир Иваныч')
-              .work__item-content
-                h3.work__item-name
-                  | Владимир Иваныч
-                p.work__item-review
-                  | К зимнему сезону — готов!
-                .work__item-services
-                  span.work__item-service.work__item-service--beard
+              .example__content
+                blockquote.example__blockquote
+                  cite.example__author-quote
+                    | Владимир Иваныч
+                  p.example__review
+                    | К зимнему сезону — готов!
+                ul.example__services
+                  li.example__service.example__service--beard
                     | Борода
-                  span.work__item-service.work__item-service--mustache
+                  li.example__service.example__service--mustache
                     | Усы
-            .work__item
-              .work__item-photo
+            .example
+              .example__photo
                 img(src='img/photo-4.jpg' width='280' height='176' alt='Винстон Синий')
-              .work__item-content
-                h3.work__item-name
-                  | Винстон Синий
-                p.work__item-review
-                  | Как только зарастаю и волосы начинают мешать видеть — бегом в Бородинский!
-                .work__item-services
-                  span.work__item-service.work__item-service--clip
+              .example__content
+                blockquote.example__blockquote
+                  cite.example__author-quote
+                    | Винстон Синий
+                  p.example__review
+                    | Как только зарастаю и волосы начинают мешать видеть — бегом в Бородинский!
+                ul.example__services
+                  li.example__service.example__service--clip
                     | Стрижка
       include ../components/price-list.pug
 
