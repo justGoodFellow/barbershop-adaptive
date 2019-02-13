@@ -1,28 +1,30 @@
 footer.page-footer
   .page-footer__wrapper
-    p.page-footer__contacts
+    .page-footer__contacts.contacts
       b
         | Барбершоп «Бородинский»
-      br
-      span.page-footer__contacts-address
-        | г. Санкт-Петербург, ул. Большая Конюшенная 19/8
-      br
-      a.btn.btn--dark.page-footer__contacts-number(href='tel:+78125556666')
-        span.page-footer__contacts-hidden
-          | Тел.:
-          |
-        | +7 (812) 555-66-66
-    p.page-footer__social
-      span.page-footer__social-appeal
-        | Давайте дружить!
-      span.social-links
-        a.social-link.social-link--vk(href='https://vk.com/htmlacademy')
-          | Мы в Вконтакте
-        a.social-link.social-link--fb(href='https://facebook.com/htmlacademy')
-          | Мы в Фейсбуке
-        a.social-link.social-link--in(href='https://instagram.com/htmlacademy')
-          | Мы в Инстаграмме
-    p.page-footer__copyright
-      | Разработано:
-      a.btn.btn--dark.page-footer__copyright-link(href='https://htmlacademy.ru/intensive/adaptive')
+      address.contacts__address
+        span.contacts__address-text
+          | г. Санкт-Петербург, ул. Большая Конюшенная 19/8
+        br
+        a.contacts__number.btn(href='tel:+78125556666')
+          span.contacts__number-text
+            | Тел.:
+            |
+          | +7 (812) 555-66-66
+    .page-footer__social.social
+      ul.social__list
+        li.social__item
+          a.social__link.social__link--vk(href='https://vk.com/htmlacademy' target='_blank')
+            | Мы в Вконтакте
+        li.social__item
+          a.social__link.social__link--fb(href='https://facebook.com/htmlacademy' target='_blank')
+            | Мы в Фейсбуке
+        li.social__item
+          a.social__link.social__link--in(href='https://instagram.com/htmlacademy' target='_blank')
+            | Мы в Инстаграмме
+    .page-footer__copyright.copyright
+      b.copyright__text
+        | Разработано:
+      a.copyright__link.btn(href='https://htmlacademy.ru/intensive/adaptive' target='_blank')
         | HTML Academy
