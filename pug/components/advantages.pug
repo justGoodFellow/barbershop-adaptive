@@ -1,31 +1,27 @@
 section.advantages
   .advantages__wrapper.slider
-    h2.advantages__title.visually-hidden
+    h2.visually-hidden
       | Наши преимущества
-    .slider__inputs
-      input.slider__input(type='radio' name='advantages' id='advantages-input-1' checked)
-      input.slider__input(type='radio' name='advantages' id='advantages-input-2')
-      input.slider__input(type='radio' name='advantages' id='advantages-input-3')
-    ul.advantages__items
+    ul.advantages__items.slider__items
       li.advantages__item.advantages__item--fast.slider__item
         h3.advantages__item-title
           | Быстро
-        p
+        p.advantages__item-text
           | Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной стрижки-минутки
       li.advantages__item.advantages__item--cool.slider__item
         h3.advantages__item-title
           | Круто
-        p
+        p.advantages__item-text
           | Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино. Во всяком случае внешне.
       li.advantages__item.advantages__item--expensive.slider__item
         h3.advantages__item-title
           | Дорого
-        p
+        p.advantages__item-text
           | Наши мастера — профессионалы своего дела и не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?
     .advantages__toggles.slider__toggles
-      label.slider__toggle(for='advantages-input-1')
+      button.slider__toggle(type='button')
         | 1
-      label.slider__toggle(for='advantages-input-2')
+      button.slider__toggle(type='button')
         | 2
-      label.slider__toggle(for='advantages-input-3')
+      button.slider__toggle(type='button')
         | 3
