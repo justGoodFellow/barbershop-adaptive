@@ -62,75 +62,92 @@ html(lang='ru')
     main
       section.record
         .record__wrapper
-          .record__content-header
-            h2.record__title
-              | Запись на стрижку
-            a.record__write.btn.btn--ghost(href='index.html')
-              | На главную
-          form.record__form
-            .record__form-data
-              .record__form-name
-                input(type='text' placeholder='Фамилия')
-                input(type='text' placeholder='Имя')
-                input(type='text' placeholder='Отчество')
-              .record__form-contacts
-                input(type='tel' placeholder='Контактный телефон')
-                input(type='email' placeholder='Контактный e-mail')
-              div
-                textarea(placeholder='Доп. информация для мастера')
-            .record__form-model
-              h3.record__form-title
+          h1.record__title
+            | Запись на стрижку
+          //- a.btn(href='index.html')
+          //-   | На главную
+          form.record__form(action='#' method='post')
+            .record__input-fields.input-fields
+              .input-fields__row
+                .input-fields__group
+                  label.visually-hidden(for='second-name')
+                    | Фамилия
+                  input.field(id='second-name' type='text' placeholder='Фамилия')
+                .input-fields__group
+                  label.visually-hidden(for='first-name')
+                    | Имя
+                  input.field(id='first-name' type='text' placeholder='Имя')
+                .input-fields__group
+                  label.visually-hidden(for='middle-name')
+                    | Отчество
+                  input.field(id='middle-name' type='text' placeholder='Отчество')
+              .input-fields__row
+                .input-fields__group
+                  label.visually-hidden(for='phone')
+                    | Контактный телефон
+                  input.field(id='phone' type='tel' placeholder='Контактный телефон')
+                .input-fields__group
+                  label.visually-hidden(for='email')
+                    | Контактный e-mail
+                  input.field(id='email' type='email' placeholder='Контактный e-mail')
+              .input-fields__row
+                .input-fields__group
+                  label.visually-hidden(for='additionally')
+                    | Доп. информация для мастера
+                  textarea.field(id='additionally' placeholder='Доп. информация для мастера')
+            fieldset.record__filters
+              legend.record__filters-legend
                 | Выберите модель бороды:
-              .record__form-model-wrapper
-                div
-                  input(id='admiral' type='radio')
-                  label(for='admiral')
+              .record__filters-items
+                .radiobox
+                  input.radiobox__input(id='admiral' type='radio' name='model' checked)
+                  label.radiobox__label(for='admiral')
                     | Адмирал
-                div
-                  input(id='woodcutter' type='radio')
-                  label(for='woodcutter')
+                .radiobox
+                  input.radiobox__input(id='woodcutter' type='radio' name='model')
+                  label.radiobox__label(for='woodcutter')
                     | Лесоруб
-                div
-                  input(id='explorer' type='radio')
-                  label(for='explorer')
+                .radiobox
+                  input.radiobox__input(id='explorer' type='radio' name='model')
+                  label.radiobox__label(for='explorer')
                     | Полярник
-                div
-                  input(id='boyar' type='radio')
-                  label(for='boyar')
+                .radiobox
+                  input.radiobox__input(id='boyar' type='radio' name='model')
+                  label.radiobox__label(for='boyar')
                     | Боярин
-                div
-                  input(id='sage' type='radio')
-                  label(for='sage')
+                .radiobox
+                  input.radiobox__input(id='sage' type='radio' name='model')
+                  label.radiobox__label(for='sage')
                     | Мудрец
-            .record__form-extra
-              h3.record__form-title
+            fieldset.record__filters
+              legend.record__filters-legend
                 | Дополнительные услуги:
-              .record__form-extra-wrapper
-                div
-                  input(id='coloring-beard' type='checkbox' checked)
-                  label(for='coloring-beard')
+              .record__filters-items
+                .checkbox
+                  input.checkbox__input(id='coloring-beard' type='checkbox' checked)
+                  label.checkbox__label(for='coloring-beard')
                     | Подкрасить бороду
-                div
-                  input(id='screw-mustache' type='checkbox' checked)
-                  label(for='screw-mustache')
+                .checkbox
+                  input.checkbox__input(id='screw-mustache' type='checkbox' checked)
+                  label.checkbox__label(for='screw-mustache')
                     | Накрутить усы
-                div
-                  input(id='comb-beard' type='checkbox')
-                  label(for='comb-beard')
+                .checkbox
+                  input.checkbox__input(id='comb-beard' type='checkbox')
+                  label.checkbox__label(for='comb-beard')
                     | Причесать бороду
-                div
-                  input(id='temples' type='checkbox')
-                  label(for='temples')
+                .checkbox
+                  input.checkbox__input(id='temples' type='checkbox')
+                  label.checkbox__label(for='temples')
                     | Подровнять виски
-                div
-                  input(id='coloring-hair' type='checkbox')
-                  label(for='coloring-hair')
+                .checkbox
+                  input.checkbox__input(id='coloring-hair' type='checkbox')
+                  label.checkbox__label(for='coloring-hair')
                     | Убрать седину
-                div
-                  input(id='polishing' type='checkbox')
-                  label(for='polishing')
+                .checkbox
+                  input.checkbox__input(id='polishing' type='checkbox')
+                  label.checkbox__label(for='polishing')
                     | Отполировать лысину
-            button.btn.record__send(type='submit')
+            button.record__send.btn(type='submit')
               | Отправить заявку
 
     include ../layouts/page-footer.pug
