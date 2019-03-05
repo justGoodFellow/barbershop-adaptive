@@ -5,7 +5,7 @@
   "homepage": "https://github.com/justGoodFellow/barbershop.git",
   "private": true,
   "engines": {
-    "node": "8.15.0"
+    "node": "8.15.2"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
@@ -16,6 +16,7 @@
   },
   "editorconfig-cli": [
     "*.json",
+    "*.js",
     "pug/**/*.pug",
     "img/*.svg",
     "sass/**/*.scss",
@@ -23,12 +24,12 @@
   ],
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "^1.0.0",
-    "autoprefixer": "^9.4.7",
+    "autoprefixer": "^9.4.10",
     "browser-sync": "^2.26.3",
     "css-mqpacker": "^7.0.0",
-    "del": "^3.0.0",
+    "del": "^4.0.0",
     "editorconfig-tools": "^0.1.1",
-    "eslint": "^5.12.1",
+    "eslint": "^5.15.1",
     "eslint-config-htmlacademy": "^0.5.2",
     "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",

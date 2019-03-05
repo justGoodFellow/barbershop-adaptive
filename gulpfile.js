@@ -5,6 +5,7 @@
 
 var autoprefixer = require('autoprefixer');
 var server = require('browser-sync');
+var objectimg = require('postcss-object-fit-images');
 var mqpacker = require('css-mqpacker');
 var del = require('del');
 var gulp = require('gulp');
@@ -53,9 +54,14 @@ function styles() {
     .pipe(postcss([
       autoprefixer({
         browsers: [
-          'last 2 version'
+          '> 0.5% in RU',
+          'last 2 versions',
+          'IE 11',
+          'iOS >= 10',
+          'not dead'
         ]
       }),
+      objectimg(),
       mqpacker({
         sort: true
       })
@@ -111,6 +117,7 @@ function serve() {
     server: 'build',
     notify: false,
     open: true,
+    cors: true,
     ui: false
   });
 
