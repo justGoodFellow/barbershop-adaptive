@@ -73,10 +73,6 @@
   &:nth-child(n+2) {
     display: none;
   }
-
-  p {
-    font-size: $font-size--large;
-  }
 }
 
 @media #{$tablet-width} {
@@ -104,7 +100,13 @@
 
 .advantages__item-title {
   font-size: $font-size--xx-large;
+  line-height: 30px;
   text-transform: uppercase;
+}
+
+.advantages__item-text {
+  font-size: $font-size--large;
+  line-height: 27px;
 }
 
 .advantages__toggles {

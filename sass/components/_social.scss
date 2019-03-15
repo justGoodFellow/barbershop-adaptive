@@ -1,8 +1,8 @@
-.social-links {
-  display: flex;
+.social__list {
+  @include list-reset;
 }
 
-.social-link {
+.social__link {
   display: block;
   flex-grow: 1;
   box-sizing: border-box;

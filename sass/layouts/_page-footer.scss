@@ -26,7 +26,7 @@
   }
 }
 
-.page-footer__contacts {
+.contacts {
   padding: 0 20px;
 
   br {
@@ -50,7 +50,11 @@
   }
 }
 
-.page-footer__contacts-address {
+.contacts__address {
+  font-style: normal;
+}
+
+.contacts__address-text {
   display: block;
   margin: 15px 0;
 
@@ -63,7 +67,7 @@
   }
 }
 
-.page-footer__contacts-number {
+.contacts__number {
   margin: 10px 0;
 }
 
@@ -78,7 +82,7 @@
   }
 }
 
-.page-footer__contacts-hidden {
+.contacts__number-text {
   display: none;
 }
 
@@ -133,6 +137,10 @@
   }
 }
 
-.page-footer__copyright-link {
+.copyright__text {
+  font-weight: normal;
+}
+
+.copyright__link {
   margin: 10px 0;
 }

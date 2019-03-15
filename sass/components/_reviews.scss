@@ -1,4 +1,6 @@
 .reviews {
+  color: black;
+
   background-color: $brown--lighten;
 }
 
@@ -21,6 +23,7 @@
 
 .reviews__title {
   font-size: $font-size--xx-large;
+  line-height: 30px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -62,7 +65,7 @@
   }
 }
 
-.reviews__author-photo {
+.reviews__author-picture {
   margin-right: 20px;
 }
 
@@ -70,6 +73,10 @@
   font-weight: bold;
   font-size: $font-size--x-large;
   font-style: normal;
+}
+
+.reviews__text {
+  line-height: 27px;
 }
 
 .reviews__prev,

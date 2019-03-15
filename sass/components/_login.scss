@@ -1,0 +1,25 @@
+.login {
+  color: black;
+
+  background-color: $brown--lighten;
+}
+
+.login__wrapper {
+  @include container;
+}
+
+.login__title {
+  font-size: $font-size--xx-large;
+  line-height: 30px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.login__description {
+  line-height: 27px;
+  text-align: center;
+}
+
+.login__link {
+  color: inherit;
+}

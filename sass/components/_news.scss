@@ -1,4 +1,6 @@
 .news {
+  color: black;
+
   background-color: $brown--lighten;
   border-bottom: 1px solid $brown--light;
 }
@@ -20,6 +22,7 @@
 
 .news__title {
   font-size: $font-size--xx-large;
+  line-height: 27px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -81,11 +84,11 @@
   }
 }
 
-.news__item-link {
+.news__link {
   display: flex;
   align-items: flex-start;
 
-  color: black;
+  color: inherit;
   text-decoration: none;
 
   &:hover,
@@ -94,7 +97,7 @@
       background-color: $brown--dark;
     }
 
-    p {
+    .news__text {
       color: $brown--dark;
       text-decoration: underline;
     }
@@ -107,16 +110,17 @@
       background-color: $brown--darkest;
     }
 
-    p {
+    .news__text {
       color: $brown--darkest;
     }
   }
+}
 
-  p {
-    margin: 0;
+.news__text {
+  margin: 0;
 
-    font-size: $font-size--regular;
-  }
+  font-size: $font-size--regular;
+  line-height: 27px;
 }
 
 .news__date {
