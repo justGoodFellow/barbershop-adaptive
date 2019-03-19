@@ -1,154 +1,155 @@
 doctype html
 html(lang='ru')
   include ../layouts/head.pug
-  body
+  body.record
     header.page-header
-      a.page-header__logo(href='index.html')
-        span.visually-hidden
-          | Бородинский
-        svg.page-header__logo-img(width='226', height='30')
-          use(xlink:href='img/symbols.svg#logo')
-      nav.main-nav
-        button.main-nav__toggle(type='button')
-          | Открыть меню
-        .main-nav__wrapper
-          ul.main-nav__items
-            li.main-nav__item
-              a.main-nav__link(href='index.html')
-                | Главная
-            li.main-nav__item
-              a.main-nav__link(href='examples.html')
-                | Наши работы
-            li.main-nav__item.main-nav__item--active
-              a.main-nav__link
-                | Записаться
-            li.main-nav__item
-              a.main-nav__link(href='#')
-                | Контакты
-            li.main-nav__item
-              a.main-nav__link(href='#')
-                | HTML Academy
-          ul.main-nav__user-items
-            li.main-nav__user-item
-              a.main-nav__user-login(href='#')
-                | Войти
+      .page-header__wrapper
+        a.page-header__logo(href='index.html')
+          span.visually-hidden
+            | Бородинский
+          svg.page-header__logo-img(width='226', height='30')
+            use(xlink:href='img/symbols.svg#logo')
+        nav.main-nav
+          button.main-nav__toggle(type='button')
+            | Открыть меню
+          .main-nav__wrapper
+            ul.main-nav__items
+              li.main-nav__item
+                a.main-nav__link(href='index.html')
+                  | Главная
+              li.main-nav__item
+                a.main-nav__link(href='examples.html')
+                  | Наши работы
+              li.main-nav__item.main-nav__item--active
+                a.main-nav__link
+                  | Записаться
+              li.main-nav__item
+                a.main-nav__link(href='#')
+                  | Контакты
+              li.main-nav__item
+                a.main-nav__link(href='#')
+                  | HTML Academy
+            ul.main-nav__user-items
+              li.main-nav__user-item
+                a.main-nav__user-login(href='#')
+                  | Войти
       section.page-header__login.login
-        h2.login__title
-          | Личный кабинет
-        p.login__description
-          | Введите свой логин и пароль, чтобы войти
-        form.login__form(action='#' method='post')
-          .login__form-group
-            label.visually-hidden(for='login')
-              | Логин
-            input.login__field--login.field(id='login' type='text' placeholder='Логин')
-          .login__form-group
-            label.visually-hidden(for='password')
-              | Пароль
-            input.login__field--password.field(id='password' type='password' placeholder='Пароль')
-          .login__row
-            .checkbox
-              input.checkbox__input(id='remember' type='checkbox')
-              label.checkbox__label(for='remember')
-                | Запомните меня
-            a(href='#')
-              | Я забыл пароль
-          .login__row
-            button.login__submit.btn(type='submit')
-              | Войти
-            button.login__close.btn(type='button')
-              | Закрыть
+        .login__wrapper
+          h2.login__title
+            | Личный кабинет
+          p.login__description
+            | Введите свой логин и пароль, чтобы войти
+          form.login__form(action='#' method='post')
+            .login__form-group
+              label.visually-hidden(for='login')
+                | Логин
+              input.login__field--login.field(id='login' type='text' placeholder='Логин')
+            .login__form-group
+              label.visually-hidden(for='password')
+                | Пароль
+              input.login__field--password.field(id='password' type='password' placeholder='Пароль')
+            .login__row
+              .checkbox
+                input.checkbox__input(id='remember' type='checkbox')
+                label.checkbox__label(for='remember')
+                  | Запомните меня
+              a.login__link(href='#')
+                | Я забыл пароль
+            .login__row
+              button.login__submit.btn(type='submit')
+                | Войти
+              button.login__close.btn.btn--ghost(type='button')
+                | Закрыть
 
-    main
-      section.record
-        .record__wrapper
-          h1.record__title
-            | Запись на стрижку
-          //- a.btn(href='index.html')
-          //-   | На главную
-          form.record__form(action='#' method='post')
-            .record__input-fields.input-fields
-              .input-fields__row
-                .input-fields__group
-                  label.visually-hidden(for='second-name')
-                    | Фамилия
-                  input.field(id='second-name' type='text' placeholder='Фамилия')
-                .input-fields__group
-                  label.visually-hidden(for='first-name')
-                    | Имя
-                  input.field(id='first-name' type='text' placeholder='Имя')
-                .input-fields__group
-                  label.visually-hidden(for='middle-name')
-                    | Отчество
-                  input.field(id='middle-name' type='text' placeholder='Отчество')
-              .input-fields__row
-                .input-fields__group
-                  label.visually-hidden(for='phone')
-                    | Контактный телефон
-                  input.field(id='phone' type='tel' placeholder='Контактный телефон')
-                .input-fields__group
-                  label.visually-hidden(for='email')
-                    | Контактный e-mail
-                  input.field(id='email' type='email' placeholder='Контактный e-mail')
-              .input-fields__row
-                .input-fields__group
-                  label.visually-hidden(for='additionally')
-                    | Доп. информация для мастера
-                  textarea.field(id='additionally' placeholder='Доп. информация для мастера')
-            fieldset.record__filters
-              legend.record__filters-legend
-                | Выберите модель бороды:
-              .record__filters-items
-                .radiobox
-                  input.radiobox__input(id='admiral' type='radio' name='model' checked)
-                  label.radiobox__label(for='admiral')
-                    | Адмирал
-                .radiobox
-                  input.radiobox__input(id='woodcutter' type='radio' name='model')
-                  label.radiobox__label(for='woodcutter')
-                    | Лесоруб
-                .radiobox
-                  input.radiobox__input(id='explorer' type='radio' name='model')
-                  label.radiobox__label(for='explorer')
-                    | Полярник
-                .radiobox
-                  input.radiobox__input(id='boyar' type='radio' name='model')
-                  label.radiobox__label(for='boyar')
-                    | Боярин
-                .radiobox
-                  input.radiobox__input(id='sage' type='radio' name='model')
-                  label.radiobox__label(for='sage')
-                    | Мудрец
-            fieldset.record__filters
-              legend.record__filters-legend
-                | Дополнительные услуги:
-              .record__filters-items
-                .checkbox
-                  input.checkbox__input(id='coloring-beard' type='checkbox' checked)
-                  label.checkbox__label(for='coloring-beard')
-                    | Подкрасить бороду
-                .checkbox
-                  input.checkbox__input(id='screw-mustache' type='checkbox' checked)
-                  label.checkbox__label(for='screw-mustache')
-                    | Накрутить усы
-                .checkbox
-                  input.checkbox__input(id='comb-beard' type='checkbox')
-                  label.checkbox__label(for='comb-beard')
-                    | Причесать бороду
-                .checkbox
-                  input.checkbox__input(id='temples' type='checkbox')
-                  label.checkbox__label(for='temples')
-                    | Подровнять виски
-                .checkbox
-                  input.checkbox__input(id='coloring-hair' type='checkbox')
-                  label.checkbox__label(for='coloring-hair')
-                    | Убрать седину
-                .checkbox
-                  input.checkbox__input(id='polishing' type='checkbox')
-                  label.checkbox__label(for='polishing')
-                    | Отполировать лысину
-            button.record__send.btn(type='submit')
-              | Отправить заявку
+    main.record__main
+      section.record__wrapper
+        h1.record__title
+          | Запись на стрижку
+        //- a.btn(href='index.html')
+        //-   | На главную
+        form.record__form(action='#' method='post')
+          .record__input-fields.input-fields
+            .input-fields__row
+              .input-fields__group
+                label.visually-hidden(for='second-name')
+                  | Фамилия
+                input.field(id='second-name' type='text' placeholder='Фамилия')
+              .input-fields__group
+                label.visually-hidden(for='first-name')
+                  | Имя
+                input.field(id='first-name' type='text' placeholder='Имя')
+              .input-fields__group
+                label.visually-hidden(for='middle-name')
+                  | Отчество
+                input.field(id='middle-name' type='text' placeholder='Отчество')
+            .input-fields__row
+              .input-fields__group
+                label.visually-hidden(for='phone')
+                  | Контактный телефон
+                input.field(id='phone' type='tel' placeholder='Контактный телефон')
+              .input-fields__group
+                label.visually-hidden(for='email')
+                  | Контактный e-mail
+                input.field(id='email' type='email' placeholder='Контактный e-mail')
+            .input-fields__row
+              .input-fields__group
+                label.visually-hidden(for='additionally')
+                  | Доп. информация для мастера
+                textarea.field(id='additionally' placeholder='Доп. информация для мастера')
+          fieldset.record__filters
+            legend.record__filters-legend
+              | Выберите модель бороды:
+            .record__filters-items
+              .radiobox
+                input.radiobox__input(id='admiral' type='radio' name='model' checked)
+                label.radiobox__label(for='admiral')
+                  | Адмирал
+              .radiobox
+                input.radiobox__input(id='woodcutter' type='radio' name='model')
+                label.radiobox__label(for='woodcutter')
+                  | Лесоруб
+              .radiobox
+                input.radiobox__input(id='explorer' type='radio' name='model')
+                label.radiobox__label(for='explorer')
+                  | Полярник
+              .radiobox
+                input.radiobox__input(id='boyar' type='radio' name='model')
+                label.radiobox__label(for='boyar')
+                  | Боярин
+              .radiobox
+                input.radiobox__input(id='sage' type='radio' name='model')
+                label.radiobox__label(for='sage')
+                  | Мудрец
+          fieldset.record__filters
+            legend.record__filters-legend
+              | Дополнительные услуги:
+            .record__filters-items
+              .checkbox
+                input.checkbox__input(id='coloring-beard' type='checkbox' checked)
+                label.checkbox__label(for='coloring-beard')
+                  | Подкрасить бороду
+              .checkbox
+                input.checkbox__input(id='screw-mustache' type='checkbox' checked)
+                label.checkbox__label(for='screw-mustache')
+                  | Накрутить усы
+              .checkbox
+                input.checkbox__input(id='comb-beard' type='checkbox')
+                label.checkbox__label(for='comb-beard')
+                  | Причесать бороду
+              .checkbox
+                input.checkbox__input(id='temples' type='checkbox')
+                label.checkbox__label(for='temples')
+                  | Подровнять виски
+              .checkbox
+                input.checkbox__input(id='coloring-hair' type='checkbox')
+                label.checkbox__label(for='coloring-hair')
+                  | Убрать седину
+              .checkbox
+                input.checkbox__input(id='polishing' type='checkbox')
+                label.checkbox__label(for='polishing')
+                  | Отполировать лысину
+          button.record__send.btn(type='submit')
+            | Отправить заявку
 
     include ../layouts/page-footer.pug
     script(src='js/concatenated.js')

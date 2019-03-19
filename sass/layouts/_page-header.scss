@@ -11,6 +11,10 @@
   }
 }
 
+.page-header__wrapper {
+  @include container;
+}
+
 .page-header__logo {
   background-color: $gray--darkest;
 
