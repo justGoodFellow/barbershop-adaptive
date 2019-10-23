@@ -52,15 +52,7 @@ function styles() {
     .pipe(plumber())
     .pipe(sass())
     .pipe(postcss([
-      autoprefixer({
-        browsers: [
-          '> 0.5% in RU',
-          'last 2 versions',
-          'IE 11',
-          'iOS >= 10',
-          'not dead'
-        ]
-      }),
+      autoprefixer(),
       objectimg(),
       mqpacker({
         sort: true
