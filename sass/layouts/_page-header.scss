@@ -16,18 +16,11 @@
 }
 
 .page-header__logo {
+  display: block;
+  padding-top: 29px;
+  padding-bottom: 26px;
+
   background-color: $gray--darkest;
-
-  a {
-    display: block;
-    padding-top: 29px;
-    padding-bottom: 26px;
-  }
-
-  img {
-    display: block;
-    margin: 0 auto;
-  }
 }
 
 @media #{$tablet-width} {
@@ -50,4 +43,9 @@
     background-image: url('../img/hero-desktop.jpg');
     background-position: center;
   }
+}
+
+.page-header__logo-img {
+  display: block;
+  margin: 0 auto;
 }
