@@ -2,13 +2,19 @@
   color: black;
 
   background-color: $brown--lighten;
+  box-shadow: 0 30px 50px rgba(black, 0.75);
 }
 
-.login__wrapper {
+.login__container {
   @include container;
+
+  padding: 20px;
+  padding-bottom: 10px;
 }
 
 .login__title {
+  margin: 15px 0;
+
   font-size: $font-size--xx-large;
   line-height: 30px;
   text-align: center;
@@ -20,6 +26,41 @@
   text-align: center;
 }
 
+.login__fields {
+  margin-bottom: 25px;
+}
+
+.login__field-group {
+  margin-bottom: 5px;
+}
+
+.login__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.login__checkbox {
+  width: 160px;
+}
+
+.login__checkbox,
 .login__link {
+  margin-bottom: 10px;
+}
+
+.login__link {
+  flex-shrink: 0;
+  width: 110px;
+
+  text-align: right;
   color: inherit;
+}
+
+.login__submit,
+.login__close {
+  min-width: 130px;
+  margin-bottom: 10px;
 }

@@ -32,33 +32,7 @@ html(lang='ru')
             li.main-nav__user-item
               a.main-nav__user-login(href='#')
                 | Войти
-      section.page-header__login.login
-        .login__wrapper
-          h2.login__title
-            | Личный кабинет
-          p.login__description
-            | Введите свой логин и пароль, чтобы войти
-          form.login__form(action='#' method='post')
-            .login__form-group
-              label.visually-hidden(for='login')
-                | Логин
-              input.login__field--login.field(id='login' type='text' placeholder='Логин')
-            .login__form-group
-              label.visually-hidden(for='password')
-                | Пароль
-              input.login__field--password.field(id='password' type='password' placeholder='Пароль')
-            .login__row
-              .checkbox
-                input.checkbox__input(id='remember' type='checkbox')
-                label.checkbox__label(for='remember')
-                  | Запомните меня
-              a.login__link(href='#')
-                | Я забыл пароль
-            .login__row
-              button.login__submit.btn(type='submit')
-                | Войти
-              button.login__close.btn.btn--ghost(type='button')
-                | Закрыть
+      include ../components/login.pug
 
     main
       h1.visually-hidden

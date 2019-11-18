@@ -52,32 +52,6 @@
   }
 }
 
-.field {
-  box-sizing: border-box;
-  width: 100%;
-  margin: 5px 0;
-  padding: 5px;
-
-  font-size: $font-size--regular;
-  font-family: $font-family;
-}
-
-@media #{$tablet-width} {
-  .field {
-    margin: 15px 0;
-
-    font-size: $font-size--x-large;
-  }
-
-  textarea.field {
-    height: 210px;
-  }
-
-  .record__form-name {
-    display: flex;
-  }
-}
-
 @media #{$desktop-width} {
   .record__form-name {
     justify-content: space-between;

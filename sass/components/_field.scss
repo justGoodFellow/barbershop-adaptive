@@ -1,0 +1,39 @@
+.field {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 14px 20px;
+
+  font-size: $font-size--regular;
+  line-height: 20px;
+  font-family: $font-family;
+
+  border: 1px solid $brown--light;
+
+  &::placeholder {
+    opacity: 1;
+  }
+
+  &:hover {
+    border-color: $brown;
+  }
+
+  &:focus {
+    border-color: #999999;
+  }
+}
+
+@media #{$tablet-width} {
+  .field {
+    margin: 15px 0;
+
+    font-size: $font-size--x-large;
+  }
+
+  textarea.field {
+    height: 210px;
+  }
+
+  .record__form-name {
+    display: flex;
+  }
+}

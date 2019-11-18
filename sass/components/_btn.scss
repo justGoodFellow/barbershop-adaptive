@@ -1,9 +1,10 @@
 .btn {
   display: block;
-  padding: 10px 15px;
+  padding: 15px 30px;
 
   font-weight: bold;
   font-size: $font-size--regular;
+  line-height: 20px;
   font-family: $font-family;
   text-align: center;
   color: white;
@@ -13,7 +14,24 @@
   background-color: $brown--dark;
   border: none;
 
+  &:not([disabled]) {
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      background-color: $brown--darkest;
+      outline: none;
+    }
+
+    &:active {
+      color: rgba(white, 0.3);
+    }
+  }
+
   &--ghost {
+    padding-top: 14px;
+    padding-bottom: 14px;
+
     color: black;
 
     background-color: $brown--lighten;

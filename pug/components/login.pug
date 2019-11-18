@@ -1,0 +1,29 @@
+section.login
+  .login__container
+    h2.login__title
+      | Личный кабинет
+    p.login__description
+      | Введите свой логин и пароль, чтобы войти
+    form.login__form(action='#' method='post')
+      .login__fields
+        .login__field-group
+          label.visually-hidden(for='login')
+            | Логин
+          input.field.field--login(id='login' type='text' placeholder='Логин')
+        .login__field-group
+          label.visually-hidden(for='password')
+            | Пароль
+          input.field.field--password(id='password' type='password' placeholder='Пароль')
+      .login__row
+        .login__checkbox.checkbox
+          input.checkbox__input(id='remember' type='checkbox')
+          label.checkbox__label(for='remember')
+            span.checkbox__label-text
+              | Запомните меня
+        a.login__link(href='#')
+          | Я забыл пароль!
+      .login__row
+        button.login__submit.btn(type='submit')
+          | Войти
+        button.login__close.btn.btn--ghost(type='button')
+          | Закрыть
