@@ -117,7 +117,7 @@
   }
 }
 
-.stats__items {
+.stats__table {
   width: 100%;
 
   border-collapse: collapse;
@@ -150,7 +150,7 @@
 }
 
 @media #{$desktop-width} {
-  .stats__items {
+  .stats__table {
     width: 640px;
   }
 }
