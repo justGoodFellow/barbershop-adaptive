@@ -1,5 +1,5 @@
 section.reviews
-  .reviews__wrapper.slider
+  .reviews__container.slider
     h2.reviews__title
       | Отзывы о нас
     //- a.reviews__write.btn(href='#')
@@ -33,10 +33,13 @@ section.reviews
     //-   | Предыдущий отзыв
     //- button.reviews__next(type='button')
     //-   | Следующий отзыв
-    .reviews__toggles.slider__toggles
+    .reviews__toggles.slider__toggles.slider__toggles--dark
+      button.slider__toggle(type='button' disabled)
+        span.visually-hidden
+          | 1
       button.slider__toggle(type='button')
-        | 1
+        span.visually-hidden
+          | 2
       button.slider__toggle(type='button')
-        | 2
-      button.slider__toggle(type='button')
-        | 3
+        span.visually-hidden
+          | 3

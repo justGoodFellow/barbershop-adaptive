@@ -1,3 +1,7 @@
+.slider__toggles {
+  text-align: center;
+}
+
 .slider__toggle {
   @include button-reset;
 
@@ -14,5 +18,13 @@
 
   &[disabled] {
     background-color: white;
+  }
+}
+
+.slider__toggles--dark .slider__toggle {
+  border-color: $gray;
+
+  &[disabled] {
+    background-color: $gray;
   }
 }
