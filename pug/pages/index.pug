@@ -3,35 +3,36 @@ html(lang='ru')
   include ../layouts/head.pug
   body
     header.page-header
-      a.page-header__logo
-        span.visually-hidden
-          | Бородинский
-        svg.page-header__logo-img(width='226', height='30')
-          use(xlink:href='img/symbols.svg#logo')
-      nav.main-nav
-        button.main-nav__toggle(type='button')
-          | Открыть меню
-        .main-nav__wrapper
-          ul.main-nav__items
-            li.main-nav__item.main-nav__item--active
-              a.main-nav__link
-                | Главная
-            li.main-nav__item
-              a.main-nav__link(href='examples.html')
-                | Наши работы
-            li.main-nav__item
-              a.main-nav__link(href='record.html')
-                | Записаться
-            li.main-nav__item
-              a.main-nav__link(href='#')
-                | Контакты
-            li.main-nav__item
-              a.main-nav__link(href='#')
-                | HTML Academy
-          ul.main-nav__user-items
-            li.main-nav__user-item
-              a.main-nav__user-login(href='#')
-                | Войти
+      .page-header__container
+        a.page-header__logo
+          span.visually-hidden
+            | Бородинский
+          svg.page-header__logo-img(width='226', height='30')
+            use(xlink:href='img/symbols.svg#logo')
+        nav.main-nav
+          button.main-nav__toggle(type='button')
+            | Открыть меню
+          .main-nav__wrapper
+            ul.main-nav__items
+              li.main-nav__item.main-nav__item--active
+                a.main-nav__link
+                  | Главная
+              li.main-nav__item
+                a.main-nav__link(href='examples.html')
+                  | Наши работы
+              li.main-nav__item
+                a.main-nav__link(href='record.html')
+                  | Записаться
+              li.main-nav__item
+                a.main-nav__link(href='#')
+                  | Контакты
+              li.main-nav__item
+                a.main-nav__link(href='#')
+                  | HTML Academy
+            ul.main-nav__user-items
+              li.main-nav__user-item
+                a.main-nav__user-login(href='#')
+                  | Войти
       include ../components/login.pug
 
     main
