@@ -1,5 +1,5 @@
 footer.page-footer
-  .page-footer__wrapper
+  .page-footer__container
     .page-footer__contacts.contacts
       b
         | Барбершоп «Бородинский»
@@ -16,13 +16,16 @@ footer.page-footer
       ul.social__list
         li.social__item
           a.social__link.social__link--vk(href='https://vk.com/htmlacademy' target='_blank')
-            | Мы в Вконтакте
+            span.visually-hidden
+              | Мы в Вконтакте
         li.social__item
           a.social__link.social__link--fb(href='https://facebook.com/htmlacademy' target='_blank')
-            | Мы в Фейсбуке
+            span.visually-hidden
+              | Мы в Фейсбуке
         li.social__item
           a.social__link.social__link--in(href='https://instagram.com/htmlacademy' target='_blank')
-            | Мы в Инстаграмме
+            span.visually-hidden
+              | Мы в Инстаграмме
     .page-footer__copyright.copyright
       b.copyright__text
         | Разработано:
