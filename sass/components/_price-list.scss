@@ -1,11 +1,11 @@
-.price {
+.price-list {
   font-size: $font-size--large;
   color: white;
 
   background-color: $gray;
 }
 
-.price__wrapper {
+.price-list__container {
   @include container;
 
   box-sizing: border-box;
@@ -14,45 +14,78 @@
 }
 
 @media #{$tablet-width} {
-  .price__wrapper {
+  .price-list__container {
     padding-right: 0;
     padding-left: 0;
   }
 }
 
-.price__title {
+.price-list__title {
   font-size: $font-size--xx-large;
   text-align: center;
   text-transform: uppercase;
 }
 
 @media #{$tablet-width} {
-  .price__title {
+  .price-list__title {
     font-size: $font-size--xxx-large;
     text-align: left;
   }
 }
 
 @media #{$desktop-width} {
-  .price__content {
+  .price-list__content {
     display: flex;
     justify-content: space-between;
   }
 }
 
+.price-list__items {
+  width: 100%;
+
+  border-collapse: collapse;
+  line-height: 27px;
+}
+
 @media #{$tablet-width} {
-  .price__items {
+  .price-list__items {
     width: 100%;
   }
 }
 
 @media #{$desktop-width} {
-  .price__items {
+  .price-list__items {
     width: 630px;
   }
 }
 
-.price__discount {
+.price-list__items td {
+  padding: 0;
+  padding-bottom: 15px;
+}
+
+.price-list__item-number {
+  display: none;
+}
+
+.price-list__name-title {
+  margin: 0;
+
+  font-size: 20px;
+}
+
+.price-list__info {
+  display: none;
+}
+
+.price-list__price {
+  width: 75px;
+
+  vertical-align: top;
+  text-align: right;
+}
+
+.price-list__discount {
   display: block;
   margin: 10px 0;
   padding: 20px 45px 20px 110px;
@@ -65,7 +98,7 @@
 }
 
 @media #{$tablet-width} {
-  .price__discount {
+  .price-list__discount {
     padding: 30px 10px;
     padding-left: 175px;
 
@@ -83,7 +116,7 @@
 }
 
 @media #{$desktop-width} {
-  .price__discount {
+  .price-list__discount {
     display: flex;
     justify-content: center;
     align-items: flex-end;
