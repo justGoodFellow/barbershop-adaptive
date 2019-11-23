@@ -36,14 +36,15 @@ html(lang='ru')
       include ../components/login.pug
 
     main.record__main
-      section.record__wrapper
-        h1.record__title
-          | Запись на стрижку
-        //- a.btn(href='index.html')
-        //-   | На главную
+      section.record__container
+        .record__main-header
+          h1.record__title
+            | Запись на стрижку
+          //- a.btn(href='index.html')
+          //-   | На главную
         form.record__form(action='#' method='post')
           .record__input-fields.input-fields
-            .input-fields__row
+            .input-fields__row.input-fields__row--name
               .input-fields__group
                 label.visually-hidden(for='second-name')
                   | Фамилия
@@ -56,7 +57,7 @@ html(lang='ru')
                 label.visually-hidden(for='middle-name')
                   | Отчество
                 input.field(id='middle-name' type='text' placeholder='Отчество')
-            .input-fields__row
+            .input-fields__row.input-fields__row--contacts
               .input-fields__group
                 label.visually-hidden(for='phone')
                   | Контактный телефон
@@ -76,23 +77,23 @@ html(lang='ru')
             .record__filters-items
               .radiobox
                 input.radiobox__input(id='admiral' type='radio' name='model' checked)
-                label.radiobox__label(for='admiral')
+                label.radiobox__label.radiobox__label--admiral(for='admiral')
                   | Адмирал
               .radiobox
                 input.radiobox__input(id='woodcutter' type='radio' name='model')
-                label.radiobox__label(for='woodcutter')
+                label.radiobox__label.radiobox__label--woodcutter(for='woodcutter')
                   | Лесоруб
               .radiobox
                 input.radiobox__input(id='explorer' type='radio' name='model')
-                label.radiobox__label(for='explorer')
+                label.radiobox__label.radiobox__label--explorer(for='explorer')
                   | Полярник
               .radiobox
                 input.radiobox__input(id='boyar' type='radio' name='model')
-                label.radiobox__label(for='boyar')
+                label.radiobox__label.radiobox__label--boyar(for='boyar')
                   | Боярин
               .radiobox
                 input.radiobox__input(id='sage' type='radio' name='model')
-                label.radiobox__label(for='sage')
+                label.radiobox__label.radiobox__label--sage(for='sage')
                   | Мудрец
           fieldset.record__filters
             legend.record__filters-legend
@@ -101,29 +102,53 @@ html(lang='ru')
               .checkbox
                 input.checkbox__input(id='coloring-beard' type='checkbox' checked)
                 label.checkbox__label(for='coloring-beard')
-                  | Подкрасить бороду
+                  span.checkbox__label-text
+                    | Подкрасить бороду
               .checkbox
                 input.checkbox__input(id='screw-mustache' type='checkbox' checked)
                 label.checkbox__label(for='screw-mustache')
-                  | Накрутить усы
+                  span.checkbox__label-text
+                    | Накрутить усы
               .checkbox
                 input.checkbox__input(id='comb-beard' type='checkbox')
                 label.checkbox__label(for='comb-beard')
-                  | Причесать бороду
+                  span.checkbox__label-text
+                    | Причесать бороду
               .checkbox
                 input.checkbox__input(id='temples' type='checkbox')
                 label.checkbox__label(for='temples')
-                  | Подровнять виски
+                  span.checkbox__label-text
+                    | Подровнять виски
               .checkbox
                 input.checkbox__input(id='coloring-hair' type='checkbox')
                 label.checkbox__label(for='coloring-hair')
-                  | Убрать седину
+                  span.checkbox__label-text
+                    | Убрать седину
               .checkbox
                 input.checkbox__input(id='polishing' type='checkbox')
                 label.checkbox__label(for='polishing')
-                  | Отполировать лысину
-          button.record__send.btn(type='submit')
+                  span.checkbox__label-text
+                    | Отполировать лысину
+          button.record__send.btn.btn--brown(type='submit')
             | Отправить заявку
+      .popup
+        b.popup__title
+          | Неудача
+        p.popup__description
+          | Что-то пошло не так.
+          br
+          | Проверьте выделенные красным поля формы.
+        button.popup__close.btn.btn--brown(type='button')
+          | Ок
+      .popup
+        b.popup__title
+          | Это успех!
+        p.popup__description
+          | Ваша заявка отправлена.
+          br
+          | Ожидайте, мы свяжемся с вами как только будет минутка.
+        button.popup__close.btn.btn--brown(type='button')
+          | Закрыть окно
 
     include ../layouts/page-footer.pug
     script(src='js/concatenated.js')

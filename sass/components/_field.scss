@@ -37,3 +37,9 @@
     display: flex;
   }
 }
+
+textarea.field {
+  height: 110px;
+
+  resize: none;
+}
