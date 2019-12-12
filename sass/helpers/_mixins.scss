@@ -2,14 +2,24 @@
   box-sizing: border-box;
   width: $mobile-width;
   margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+}
 
-  @media (min-width: $tablet-width) {
-    width: 640px;
-  }
+@mixin container-tablet {
+  @include container;
 
-  @media (min-width: $desktop-width) {
-    width: 960px;
-  }
+  width: $tablet-width;
+  padding-right: 64px;
+  padding-left: 64px;
+}
+
+@mixin container-desktop {
+  @include container-tablet;
+
+  width: $desktop-width;
+  padding-right: 120px;
+  padding-left: 120px;
 }
 
 @mixin visually-hidden {
