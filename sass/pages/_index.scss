@@ -1,0 +1,11 @@
+.index {
+  .page-header__logo {
+    @media (min-width: $tablet-width) {
+      height: 400px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    height: 650px;
+  }
+}
