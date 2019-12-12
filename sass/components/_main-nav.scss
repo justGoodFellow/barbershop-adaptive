@@ -4,13 +4,13 @@
   font-size: $font-size--regular;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .main-nav {
     background-color: black;
   }
 }
 
-@media #{$mobile-width-only} {
+@media (max-width: $mobile-width-only) {
   .main-nav__toggle {
     position: absolute;
     top: 0;
@@ -152,7 +152,7 @@
   }
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .main-nav__toggle {
     display: none;
   }
@@ -162,7 +162,7 @@
   @include container;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .main-nav__wrapper {
     display: flex;
   }
@@ -176,7 +176,7 @@
   list-style: none;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .main-nav__items,
   .main-nav__user-items {
     display: flex;
@@ -187,7 +187,7 @@
   text-transform: uppercase;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .main-nav__items {
     flex-grow: 1;
   }
@@ -202,7 +202,7 @@
   text-decoration: none;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .main-nav__link,
   .main-nav__user-login {
     padding: 25px 15px;
@@ -213,7 +213,7 @@
   }
 }
 
-@media #{$desktop-width} {
+@media (min-width: $desktop-width) {
   .main-nav__link,
   .main-nav__user-login {
     padding: 25px 30px;
@@ -258,7 +258,7 @@
   }
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .main-nav__link {
     box-shadow: none;
 
@@ -292,7 +292,7 @@
   }
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .main-nav__user-login {
     justify-content: center;
     box-sizing: border-box;
@@ -314,7 +314,7 @@
   }
 }
 
-@media #{$desktop-width} {
+@media (min-width: $desktop-width) {
   .main-nav__user-login {
     width: auto;
 

@@ -13,7 +13,7 @@
   padding-bottom: 40px;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .price-list__container {
     padding-right: 0;
     padding-left: 0;
@@ -26,14 +26,14 @@
   text-transform: uppercase;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .price-list__title {
     font-size: $font-size--xxx-large;
     text-align: left;
   }
 }
 
-@media #{$desktop-width} {
+@media (min-width: $desktop-width) {
   .price-list__content {
     display: flex;
     justify-content: space-between;
@@ -47,13 +47,13 @@
   line-height: 27px;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .price-list__items {
     width: 100%;
   }
 }
 
-@media #{$desktop-width} {
+@media (min-width: $desktop-width) {
   .price-list__items {
     width: 630px;
   }
@@ -97,7 +97,7 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .price-list__discount {
     padding: 30px 10px;
     padding-left: 175px;
@@ -115,7 +115,7 @@
   }
 }
 
-@media #{$desktop-width} {
+@media (min-width: $desktop-width) {
   .price-list__discount {
     display: flex;
     justify-content: center;

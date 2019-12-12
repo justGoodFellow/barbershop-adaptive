@@ -1,13 +1,13 @@
 @mixin container {
   box-sizing: border-box;
-  width: 320px;
+  width: $mobile-width;
   margin: 0 auto;
 
-  @media #{$tablet-width} {
+  @media (min-width: $tablet-width) {
     width: 640px;
   }
 
-  @media #{$desktop-width} {
+  @media (min-width: $desktop-width) {
     width: 960px;
   }
 }

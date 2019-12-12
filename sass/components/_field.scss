@@ -22,7 +22,7 @@
   }
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .field {
     margin: 15px 0;
 

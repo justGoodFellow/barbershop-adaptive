@@ -12,7 +12,7 @@
   padding-bottom: 30px;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .reviews__container {
     display: flex;
     flex-wrap: wrap;
@@ -28,13 +28,13 @@
   text-transform: uppercase;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .reviews__title {
     font-size: $font-size--xxx-large;
   }
 }
 
-@media #{$desktop-width} {
+@media (min-width: $desktop-width) {
   .reviews__title {
     margin-left: 70px;
   }
@@ -44,7 +44,7 @@
   display: none;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .reviews__write {
     display: block;
     align-self: center;

@@ -2,13 +2,13 @@
   @include container;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .stats {
     margin-top: -184px;
   }
 }
 
-@media #{$desktop-width} {
+@media (min-width: $desktop-width) {
   .stats {
     display: flex;
     margin-top: -159px;
@@ -24,7 +24,7 @@
   background-color: white;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .stats__header {
     position: relative;
 
@@ -40,7 +40,7 @@
   }
 }
 
-@media #{$desktop-width} {
+@media (min-width: $desktop-width) {
   .stats__header {
     flex-direction: column;
     width: 320px;
@@ -58,7 +58,7 @@
   text-transform: uppercase;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .stats__slogan {
     font-size: $font-size--xxx-large;
     text-transform: none;
@@ -70,7 +70,7 @@
   line-height: 27px;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .stats__intro {
     flex-basis: 50%;
     box-sizing: border-box;
@@ -79,7 +79,7 @@
   }
 }
 
-@media #{$desktop-width} {
+@media (min-width: $desktop-width) {
   .stats__intro {
     flex-basis: auto;
     padding: 0;
@@ -105,7 +105,7 @@
   }
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .stats__legend {
     &--top {
       display: block;
@@ -149,7 +149,7 @@
   }
 }
 
-@media #{$desktop-width} {
+@media (min-width: $desktop-width) {
   .stats__table {
     width: 640px;
   }
@@ -160,7 +160,7 @@
   font-size: $font-size--xxx-large;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .stats__value {
     font-size: 72px;
   }
@@ -173,7 +173,7 @@
   color: $brown--lightest;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .stats__text {
     font-size: $font-size--large;
 

@@ -13,7 +13,7 @@
   padding-bottom: 25px;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .page-footer__container {
     display: flex;
     flex-wrap: wrap;
@@ -21,7 +21,7 @@
   }
 }
 
-@media #{$desktop-width} {
+@media (min-width: $desktop-width) {
   .page-footer__container {
     justify-content: space-between;
   }
@@ -35,7 +35,7 @@
   }
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .page-footer__contacts {
     order: 1;
     padding: 0;
@@ -62,7 +62,7 @@
   line-height: 27px;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .page-footer__contacts-address {
     margin: 0;
   }
@@ -72,7 +72,7 @@
   margin-bottom: 25px;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .page-footer__contacts-number {
     display: inline;
     padding: 0;
@@ -87,7 +87,7 @@
   display: none;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .page-footer__contacts-hidden {
     display: inline;
 
@@ -99,14 +99,14 @@
   margin-bottom: 30px;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .page-footer__social {
     order: 3;
     width: 100%;
   }
 }
 
-@media #{$desktop-width} {
+@media (min-width: $desktop-width) {
   .page-footer__social {
     width: auto;
   }
@@ -116,7 +116,7 @@
   display: none;
 }
 
-@media #{$desktop-width} {
+@media (min-width: $desktop-width) {
   .page-footer__social-appeal {
     display: block;
     margin-bottom: 10px;
@@ -127,7 +127,7 @@
   padding: 0 20px;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .page-footer__copyright {
     order: 2;
     margin-left: auto;
@@ -135,7 +135,7 @@
   }
 }
 
-@media #{$desktop-width} {
+@media (min-width: $desktop-width) {
   .page-footer__copyright {
     order: 3;
     margin-left: 0;

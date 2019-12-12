@@ -13,14 +13,14 @@
   padding-bottom: 30px;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .record__container {
     padding-right: 0;
     padding-left: 0;
   }
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .record__main-header {
     display: flex;
     justify-content: space-between;
@@ -35,7 +35,7 @@
   text-transform: uppercase;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .record__title {
     font-size: $font-size--xxx-large;
     text-align: left;
@@ -46,13 +46,13 @@
 //   display: none;
 // }
 //
-// @media #{$tablet-width} {
+// @media (min-width: $tablet-width) {
 //   .record__write {
 //     display: block;
 //   }
 // }
 
-@media #{$desktop-width} {
+@media (min-width: $desktop-width) {
   .input-fields__row {
     &--name {
       justify-content: space-between;
@@ -99,7 +99,7 @@
   text-transform: uppercase;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .record__filters-legend {
     font-size: $font-size--xx-large;
   }
@@ -111,7 +111,7 @@
   }
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .record__filters:first-of-type {
     .radiobox__label {
       font-size: $font-size--x-large;
@@ -124,7 +124,7 @@
   flex-wrap: wrap;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .record__filters:first-of-type .record__filters-items {
     justify-content: space-around;
   }
@@ -135,7 +135,7 @@
   margin-bottom: 30px;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .record__form .radiobox {
     padding-bottom: 135px;
 
@@ -152,7 +152,7 @@
   margin-bottom: 20px;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .record__form {
     .checkbox {
       width: 320px;
@@ -169,7 +169,7 @@
   margin: 20px 0;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .record__send {
     font-size: $font-size--x-large;
   }

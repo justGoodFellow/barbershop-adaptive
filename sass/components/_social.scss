@@ -58,13 +58,13 @@
   }
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .social-link {
     width: auto;
   }
 }
 
-@media #{$desktop-width} {
+@media (min-width: $desktop-width) {
   .social-link {
     width: 50px;
     height: 50px;

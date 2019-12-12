@@ -5,7 +5,7 @@
   color: white;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .page-header {
     flex-direction: column-reverse;
   }
@@ -23,7 +23,7 @@
   background-color: $gray--darkest;
 }
 
-@media #{$tablet-width} {
+@media (min-width: $tablet-width) {
   .page-header__logo {
     height: 397px;
     overflow: hidden;
@@ -36,7 +36,7 @@
   }
 }
 
-@media #{$desktop-width} {
+@media (min-width: $desktop-width) {
   .page-header__logo {
     height: 648px;
 
