@@ -1,15 +1,29 @@
 .login {
+  position: relative;
+
   color: black;
 
   background-color: $brown--lighten;
   box-shadow: 0 30px 50px rgba(black, 0.75);
+
+  @media (min-width: $tablet-width) {
+    width: 460px;
+    margin: 0 auto;
+  }
 }
 
 .login__container {
   @include container;
 
-  padding: 20px;
+  padding-top: 20px;
   padding-bottom: 10px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 45px;
+    padding-right: 0;
+    padding-bottom: 35px;
+    padding-left: 0;
+  }
 }
 
 .login__title {
@@ -63,4 +77,38 @@
 .login__close {
   min-width: 130px;
   margin-bottom: 10px;
+}
+
+.login__submit {
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+}
+
+.login__optional-text {
+  @media (max-width: $tablet-width - 1) {
+    display: none;
+  }
+}
+
+.login__close {
+  @media (min-width: $tablet-width) {
+    position: absolute;
+    top: 60px;
+    right: -100px;
+
+    width: 25px;
+    min-width: auto;
+    height: 25px;
+    margin: 0;
+    padding: 0;
+
+    border: none;
+  }
+}
+
+.login__close-text {
+  @media (min-width: $tablet-width) {
+    @include visually-hidden;
+  }
 }

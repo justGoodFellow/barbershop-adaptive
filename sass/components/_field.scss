@@ -20,21 +20,11 @@
   &:focus {
     border-color: #999999;
   }
-}
 
-@media (min-width: $tablet-width) {
-  .field {
-    margin: 15px 0;
+  @media (min-width: $tablet-width) {
+    padding: 22px 25px;
 
     font-size: $font-size--x-large;
-  }
-
-  textarea.field {
-    height: 210px;
-  }
-
-  .record__form-name {
-    display: flex;
   }
 }
 
@@ -42,4 +32,8 @@ textarea.field {
   height: 110px;
 
   resize: none;
+
+  @media (min-width: $tablet-width) {
+    height: 210px;
+  }
 }
