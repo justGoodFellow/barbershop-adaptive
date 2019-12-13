@@ -1,12 +1,26 @@
 .main-nav {
-  position: relative;
-
   font-size: $font-size--regular;
+
+  @media (min-width: $tablet-width) {
+    background-color: black;
+  }
 }
 
-@media (min-width: $tablet-width) {
-  .main-nav {
-    background-color: black;
+.main-nav__container {
+  @include container;
+
+  position: relative;
+
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    @include container-tablet;
+
+    display: flex;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include container-desktop;
   }
 }
 
@@ -152,19 +166,9 @@
   }
 }
 
-@media (min-width: $tablet-width) {
-  .main-nav__toggle {
+.main-nav__toggle {
+  @media (min-width: $tablet-width) {
     display: none;
-  }
-}
-
-.main-nav__wrapper {
-  @include container;
-}
-
-@media (min-width: $tablet-width) {
-  .main-nav__wrapper {
-    display: flex;
   }
 }
 
@@ -174,21 +178,16 @@
   padding: 0;
 
   list-style: none;
-}
 
-@media (min-width: $tablet-width) {
-  .main-nav__items,
-  .main-nav__user-items {
+  @media (min-width: $tablet-width) {
     display: flex;
   }
 }
 
 .main-nav__items {
   text-transform: uppercase;
-}
 
-@media (min-width: $tablet-width) {
-  .main-nav__items {
+  @media (min-width: $tablet-width) {
     flex-grow: 1;
   }
 }
@@ -200,24 +199,16 @@
 
   color: white;
   text-decoration: none;
-}
 
-@media (min-width: $tablet-width) {
-  .main-nav__link,
-  .main-nav__user-login {
+  @media (min-width: $tablet-width) {
     padding: 25px 15px;
 
     color: white;
 
     background-color: black;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .main-nav__link,
-  .main-nav__user-login {
-    padding: 25px 30px;
-
+  @media (min-width: $desktop-width) {
     &:hover,
     &:focus {
       color: black;
@@ -256,10 +247,8 @@
       box-shadow: none;
     }
   }
-}
 
-@media (min-width: $tablet-width) {
-  .main-nav__link {
+  @media (min-width: $tablet-width) {
     box-shadow: none;
 
     &:hover,
@@ -290,10 +279,8 @@
     background-repeat: no-repeat;
     background-position: center left;
   }
-}
 
-@media (min-width: $tablet-width) {
-  .main-nav__user-login {
+  @media (min-width: $tablet-width) {
     justify-content: center;
     box-sizing: border-box;
     width: 65px;
@@ -312,10 +299,8 @@
       }
     }
   }
-}
 
-@media (min-width: $desktop-width) {
-  .main-nav__user-login {
+  @media (min-width: $desktop-width) {
     width: auto;
 
     font-weight: bold;
