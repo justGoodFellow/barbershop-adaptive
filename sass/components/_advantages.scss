@@ -5,42 +5,42 @@
   color: $brown--lightest;
 
   background-color: $gray--darkest;
-}
 
-@media (min-width: $tablet-width) {
-  .advantages {
+  @media (min-width: $tablet-width) {
     text-align: left;
 
     background-color: $gray;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .advantages {
+  @media (min-width: $desktop-width) {
     padding-bottom: 40px;
 
     text-align: center;
   }
 }
 
-.advantages__wrapper {
+.advantages__container {
   @include container;
+
+  @media (min-width: $tablet-width) {
+    @include container-tablet;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include container-desktop;
+  }
 }
 
 .advantages__items {
   padding: 0;
 
   list-style: none;
-}
 
-@media (min-width: $tablet-width) {
-  .advantages__items {
+  @media (min-width: $tablet-width) {
     padding: 0 30px;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .advantages__items {
+  @media (min-width: $desktop-width) {
     display: flex;
     padding: 0;
   }
@@ -65,11 +65,10 @@
     background-image: url('../img/icon-advantages-3.svg');
     background-size: 95px 91px;
   }
-}
 
-@media (min-width: $tablet-width) {
-  .advantages__item {
-    padding: 0;
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    padding: 7px 0;
     padding-left: 130px;
 
     background-position: center left;
@@ -78,10 +77,8 @@
       display: block;
     }
   }
-}
 
-@media (min-width: $desktop-width) {
-  .advantages__item {
+  @media (min-width: $desktop-width) {
     margin: 0;
     padding: 0 38px;
     padding-top: 100px;
@@ -99,4 +96,10 @@
 .advantages__item-text {
   font-size: $font-size--large;
   line-height: 27px;
+}
+
+.advantages__toggles {
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
