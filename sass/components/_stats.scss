@@ -1,47 +1,54 @@
 .stats {
-  @include container;
-}
+  @media (min-width: $tablet-width) {
+    margin-top: -185px;
 
-@media (min-width: $tablet-width) {
-  .stats {
-    margin-top: -184px;
+    background-color: $gray;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: -160px;
   }
 }
 
-@media (min-width: $desktop-width) {
-  .stats {
+.stats__container {
+  @include container;
+
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    @include container-tablet;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include container-desktop;
+
     display: flex;
-    margin-top: -159px;
   }
 }
 
 .stats__header {
-  padding: 30px 38px 10px 38px;
+  padding: 25px 20px;
+  padding-bottom: 10px;
 
   text-align: center;
   color: black;
 
   background-color: white;
-}
 
-@media (min-width: $tablet-width) {
-  .stats__header {
+  @media (min-width: $tablet-width) {
     position: relative;
 
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
     box-sizing: border-box;
-    height: 184px;
+    min-height: 185px;
     padding: 30px 0;
     overflow: hidden;
 
     text-align: left;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .stats__header {
+  @media (min-width: $desktop-width) {
     flex-direction: column;
     width: 320px;
     height: auto;
@@ -50,37 +57,45 @@
   }
 }
 
+.stats__header-element {
+  @media (min-width: $tablet-width) {
+    box-sizing: border-box;
+    width: 320px;
+    padding-right: 30px;
+    padding-left: 40px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: auto;
+    padding: 0;
+  }
+}
+
 .stats__slogan {
   display: block;
+  margin-bottom: 20px;
 
   font-size: $font-size--xx-large;
   line-height: 30px;
   text-transform: uppercase;
-}
 
-@media (min-width: $tablet-width) {
-  .stats__slogan {
+  @media (min-width: $tablet-width) {
     font-size: $font-size--xxx-large;
     text-transform: none;
   }
 }
 
 .stats__intro {
+  margin: 15px 0;
+
   font-size: $font-size--large;
   line-height: 27px;
-}
 
-@media (min-width: $tablet-width) {
-  .stats__intro {
-    flex-basis: 50%;
-    box-sizing: border-box;
-    padding-right: 82px;
-    padding-left: 32px;
+  @media (min-width: $tablet-width) {
+    margin-top: 0;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .stats__intro {
+  @media (min-width: $desktop-width) {
     flex-basis: auto;
     padding: 0;
   }
@@ -90,28 +105,27 @@
   display: block;
 
   font-size: $font-size--large;
-  text-align: center;
+  color: red;
 
   &--top {
     display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+
+      color: #b2b2b2;
+    }
   }
 
   &--bottom {
     padding-top: 15px;
 
+    text-align: center;
     color: rgba(white, 0.3);
 
     background-color: $gray--darkest;
-  }
-}
 
-@media (min-width: $tablet-width) {
-  .stats__legend {
-    &--top {
-      display: block;
-    }
-
-    &--bottom {
+    @media (min-width: $tablet-width) {
       display: none;
     }
   }
@@ -122,47 +136,69 @@
 
   border-collapse: collapse;
 
-  tr {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
 
-    color: white;
-
-    background-color: $gray--light;
-
-    &:nth-child(1) {
-      background-color: #404040;
-    }
-
-    &:nth-child(2) {
-      background-color: #4e4e4e;
-    }
-
-    &:nth-child(3) {
-      background-color: $gray;
-    }
-
-    &:nth-child(4) {
-      background-color: #404040;
-    }
+  @media (min-width: $desktop-width) {
+    width: 640px;
   }
 }
 
-@media (min-width: $desktop-width) {
-  .stats__table {
-    width: 640px;
+.stats__table tbody {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
   }
+}
+
+.stats__table tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+
+  color: white;
+
+  background-color: $gray--light;
+
+  &:nth-child(1) {
+    background-color: #404040;
+  }
+
+  &:nth-child(2) {
+    background-color: #4e4e4e;
+  }
+
+  &:nth-child(3) {
+    background-color: $gray;
+  }
+
+  &:nth-child(4) {
+    background-color: #404040;
+  }
+
+  @media (min-width: $tablet-width) {
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    width: 320px;
+    padding: 30px 25px;
+  }
+}
+
+.stats__table td {
+  display: block;
+  padding: 0;
 }
 
 .stats__value {
   font-weight: bold;
   font-size: $font-size--xxx-large;
-}
 
-@media (min-width: $tablet-width) {
-  .stats__value {
+  @media (min-width: $tablet-width) {
     font-size: 72px;
+    line-height: 82px;
   }
 }
 
@@ -171,11 +207,10 @@
   line-height: 18px;
   text-align: right;
   color: $brown--lightest;
-}
 
-@media (min-width: $tablet-width) {
-  .stats__text {
+  @media (min-width: $tablet-width) {
     font-size: $font-size--large;
+    text-align: left;
 
     br {
       display: none;

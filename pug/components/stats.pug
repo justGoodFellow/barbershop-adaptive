@@ -1,57 +1,62 @@
 section.stats
-  .stats__header
-    h2.visually-hidden
-      | Статистика Барбершопа
-    b.stats__slogan
-      | Стрижка у нас
-      br
-      | это выгодно!
-    p.stats__intro
-      | Мужская стрижка требует точного подхода. Обратимся к статистике:
-    small.stats__legend.stats__legend--top
+  .stats__container
+    .stats__header
+      h2.visually-hidden
+        | Статистика Барбершопа
+      .stats__header-element
+        b.stats__slogan
+          | Стрижка у нас
+          br
+          | это выгодно!
+      .stats__header-element
+        p.stats__intro
+          | Мужская стрижка требует точного подхода. Обратимся к статистике:
+      .stats__header-element
+        small.stats__legend.stats__legend--top
+          sup
+            | *
+          |
+          | - приведенные данные ложь
+    table.stats__table
+      tbody
+        tr
+          td.stats__value
+            | 1 500
+            sup
+              | *
+          td.stats__text
+            | рублей
+            br
+            |
+            | вложений
+        tr
+          td.stats__value
+            | 7 200
+          td.stats__text
+            | секунд
+            br
+            |
+            | времени мастера
+        tr
+          td.stats__value
+            | 90 000
+          td.stats__text
+            | подстриженных
+            br
+            |
+            | волос
+        tr
+          td.stats__value
+            | 500 000
+            sup
+              | *
+          td.stats__text
+            | лайков и
+            br
+            |
+            | комплиментов
+    small.stats__legend.stats__legend--bottom
       sup
         | *
       |
       | - приведенные данные ложь
-  table.stats__table
-    tr
-      td.stats__value
-        | 1 500
-        sup
-          | *
-      td.stats__text
-        | рублей
-        br
-        |
-        | вложений
-    tr
-      td.stats__value
-        | 7 200
-      td.stats__text
-        | секунд
-        br
-        |
-        | времени мастера
-    tr
-      td.stats__value
-        | 90 000
-      td.stats__text
-        | подстриженных
-        br
-        |
-        | волос
-    tr
-      td.stats__value
-        | 500 000
-        sup
-          | *
-      td.stats__text
-        | лайков и
-        br
-        |
-        | комплиментов
-  small.stats__legend.stats__legend--bottom
-    sup
-      | *
-    |
-    | - приведенные данные ложь
