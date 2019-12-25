@@ -1,6 +1,8 @@
 .btn {
   display: block;
-  padding: 15px 30px;
+  box-sizing: border-box;
+  min-width: 160px;
+  padding: 15px 23px;
 
   font-weight: bold;
   font-size: $font-size--regular;
