@@ -10,7 +10,6 @@
   display: flex;
 
   font-size: 18px;
-  line-height: 20px;
 
   cursor: pointer;
 
@@ -21,8 +20,8 @@
 
     flex-shrink: 0;
     box-sizing: border-box;
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
     margin-right: 15px;
 
     background-color: white;
@@ -65,5 +64,5 @@
 }
 
 .checkbox__label-text {
-  padding-top: 5px;
+  padding-top: 8px;
 }

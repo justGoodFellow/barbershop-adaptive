@@ -58,6 +58,17 @@
 
 .login__checkbox {
   width: 160px;
+
+  .checkbox__label {
+    &::before {
+      width: 33px;
+      height: 33px;
+    }
+  }
+
+  .checkbox__label-text {
+    padding-top: 7px;
+  }
 }
 
 .login__checkbox,
