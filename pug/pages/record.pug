@@ -38,11 +38,11 @@ html(lang='ru')
 
     main.record__main
       section.record__container
-        .record__main-header
+        .record__header
           h1.record__title
             | Запись на стрижку
-          //- a.btn(href='index.html')
-          //-   | На главную
+          a.record__header-link.btn.btn--ghost(href='index.html')
+            | На главную
         form.record__form(action='#' method='post')
           .record__input-fields.input-fields
             .input-fields__row.input-fields__row--name
@@ -72,7 +72,7 @@ html(lang='ru')
                 label.visually-hidden(for='additionally')
                   | Доп. информация для мастера
                 textarea.field(id='additionally' placeholder='Доп. информация для мастера')
-          fieldset.record__filters
+          fieldset.record__filters.record__filters--models
             legend.record__filters-legend
               | Выберите модель бороды:
             .record__filters-items
@@ -96,7 +96,7 @@ html(lang='ru')
                 input.radiobox__input(id='sage' type='radio' name='model')
                 label.radiobox__label.radiobox__label--sage(for='sage')
                   | Мудрец
-          fieldset.record__filters
+          fieldset.record__filters.record__filters--services
             legend.record__filters-legend
               | Дополнительные услуги:
             .record__filters-items
@@ -138,10 +138,12 @@ html(lang='ru')
         p.popup__description
           | Что-то пошло не так.
           br
-          | Проверьте выделенные красным поля формы.
+          | Проверьте выделенные
+          br
+          | красным поля формы.
         button.popup__close.btn.btn--brown(type='button')
           | Ок
-      .popup
+      .popup.popup--big
         b.popup__title
           | Это успех!
         p.popup__description

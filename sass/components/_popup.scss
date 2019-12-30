@@ -7,6 +7,14 @@
 
   background-color: white;
   box-shadow: 0 30px 50px rgba(black, 0.75);
+
+  &--big {
+    @media (min-width: $tablet-width) {
+      width: 460px;
+      padding-right: 70px;
+      padding-left: 70px;
+    }
+  }
 }
 
 .popup__title {
@@ -23,4 +31,15 @@
 .popup__close {
   width: 180px;
   margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 150px;
+    min-width: auto;
+  }
+}
+
+.popup--big .popup__close {
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
 }

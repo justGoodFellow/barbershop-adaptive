@@ -2,5 +2,54 @@
   &--name,
   &--contacts {
     margin-bottom: 30px;
+
+    @media (min-width: $tablet-width) {
+      margin-bottom: 0;
+    }
+  }
+
+  &--name {
+    @media (min-width: $tablet-width) {
+      display: flex;
+
+      .input-fields__group {
+        .field {
+          border-right: none;
+        }
+
+        &:last-child {
+          .field {
+            border-right: 1px solid $brown--light;
+          }
+        }
+      }
+    }
+
+    @media (min-width: $desktop-width) {
+      .input-fields__group {
+        .field {
+          border-right: 1px solid $brown--light;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &--name {
+      justify-content: space-between;
+
+      .field {
+        width: 295px;
+      }
+    }
+
+    &--contacts {
+      display: flex;
+      justify-content: space-between;
+
+      .field {
+        width: 460px;
+      }
+    }
   }
 }

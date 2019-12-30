@@ -7,69 +7,48 @@
 .record__container {
   @include container;
 
-  box-sizing: border-box;
-  padding: 0 20px;
   padding-top: 10px;
   padding-bottom: 30px;
-}
 
-@media (min-width: $tablet-width) {
-  .record__container {
-    padding-right: 0;
-    padding-left: 0;
+  @media (min-width: $tablet-width) {
+    @include container-tablet;
+
+    padding-top: 55px;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include container-desktop;
   }
 }
 
-@media (min-width: $tablet-width) {
-  .record__main-header {
+.record__header {
+  @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 50px;
   }
 }
 
 .record__title {
   font-size: $font-size--xx-large;
-  line-height: 30px;
   text-align: center;
   text-transform: uppercase;
-}
 
-@media (min-width: $tablet-width) {
-  .record__title {
+  @media (min-width: $tablet-width) {
+    margin: 0;
+    margin-right: 80px;
+
     font-size: $font-size--xxx-large;
     text-align: left;
   }
 }
 
-// .record__write {
-//   display: none;
-// }
-//
-// @media (min-width: $tablet-width) {
-//   .record__write {
-//     display: block;
-//   }
-// }
+.record__header-link {
+  display: none;
 
-@media (min-width: $desktop-width) {
-  .input-fields__row {
-    &--name {
-      justify-content: space-between;
-
-      .field {
-        width: 295px;
-      }
-    }
-
-    &--contacts {
-      display: flex;
-      justify-content: space-between;
-
-      .field {
-        width: 460px;
-      }
-    }
+  @media (min-width: $tablet-width) {
+    display: block;
   }
 }
 
@@ -103,69 +82,98 @@
   font-size: $font-size--large;
   line-height: 27px;
   text-transform: uppercase;
-}
 
-@media (min-width: $tablet-width) {
-  .record__filters-legend {
+  @media (min-width: $tablet-width) {
     font-size: $font-size--xx-large;
   }
 }
 
-.record__filters:first-of-type {
-  .radiobox__label {
-    text-transform: lowercase;
-  }
-}
+.record__filters--models {
+  .record__filters-items {
+    display: flex;
+    flex-wrap: wrap;
 
-@media (min-width: $tablet-width) {
-  .record__filters:first-of-type {
-    .radiobox__label {
+    @media (min-width: $tablet-width) {
+      justify-content: space-around;
+    }
+  }
+
+  .radiobox {
+    margin: 0 13px;
+    margin-bottom: 30px;
+  }
+
+  .radiobox__label {
+    padding: 0 5px;
+    padding-bottom: 65px;
+
+    text-transform: lowercase;
+
+    @media (min-width: $tablet-width) {
       font-size: $font-size--x-large;
+    }
+
+    &--admiral {
+      background-image: url('../img/icon-beard-1.svg');
+      background-size: 52px 49px;
+    }
+
+    &--woodcutter {
+      padding-bottom: 80px;
+
+      background-image: url('../img/icon-beard-2.svg');
+      background-size: 58px 68px;
+    }
+
+    &--explorer {
+      padding-bottom: 90px;
+
+      background-image: url('../img/icon-beard-3.svg');
+      background-size: 64px 78px;
+    }
+
+    &--boyar {
+      padding-bottom: 110px;
+
+      background-image: url('../img/icon-beard-4.svg');
+      background-size: 58px 98px;
+    }
+
+    &--sage {
+      padding-bottom: 120px;
+
+      background-image: url('../img/icon-beard-5.svg');
+      background-size: 64px 105px;
     }
   }
 }
 
-.record__filters:first-of-type .record__filters-items {
-  display: flex;
-  flex-wrap: wrap;
+.record__filters-items {
+  //
 }
 
-@media (min-width: $tablet-width) {
-  .record__filters:first-of-type .record__filters-items {
-    justify-content: space-around;
-  }
-}
-
-.record__form .radiobox {
-  margin: 0 13px;
-  margin-bottom: 30px;
-}
-
-@media (min-width: $tablet-width) {
-  .record__form .radiobox {
-    padding-bottom: 135px;
-
-    background-position: center 65px;
+.record__filters--services {
+  .record__filters-items {
+    @media (min-width: $tablet-width) {
+      display: flex;
+      flex-wrap: wrap;
+    }
   }
 
-  .record__filters:nth-of-type(2) .record__filters-items {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
+  .checkbox {
+    margin-bottom: 20px;
 
-.record__form .checkbox {
-  margin-bottom: 20px;
-}
-
-@media (min-width: $tablet-width) {
-  .record__form {
-    .checkbox {
+    @media (min-width: $tablet-width) {
+      box-sizing: border-box;
       width: 320px;
+      margin-bottom: 45px;
+      padding-right: 40px;
     }
 
     .checkbox__label {
-      font-size: $font-size--x-large;
+      @media (min-width: $tablet-width) {
+        // font-size: $font-size--x-large;
+      }
     }
   }
 }
@@ -173,10 +181,11 @@
 .record__send {
   width: 100%;
   margin: 20px 0;
-}
 
-@media (min-width: $tablet-width) {
-  .record__send {
+  @media (min-width: $tablet-width) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
     font-size: $font-size--x-large;
   }
 }
