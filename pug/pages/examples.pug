@@ -39,11 +39,11 @@ html(lang='ru')
     main
       section.examples
         .examples__container
-          //- .examples__header
-          h1.examples__title
-            | Наши работы
-          //- a.examples__to-main.btn(href='index.html')
-          //-   | На главную
+          .examples__header
+            h1.examples__title
+              | Наши работы
+            a.examples__to-main.btn.btn--ghost(href='index.html')
+              | На главную
           .examples__items
             .example.example--big
               .example__photo
@@ -70,8 +70,8 @@ html(lang='ru')
                 blockquote.example__blockquote
                   cite.example__quote-author
                     | Саша Мальцев
-                  p.example__review
-                    | Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?
+                p.example__review
+                  | Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?
                 ul.example__services
                   li.example__service.example__service--clip
                     | Стрижка

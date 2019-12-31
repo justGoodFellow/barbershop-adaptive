@@ -7,20 +7,21 @@
 .examples__container {
   @include container;
 
-  padding: 0 20px;
   padding-top: 10px;
   padding-bottom: 30px;
-}
 
-@media (min-width: $tablet-width) {
-  .examples__container {
-    padding-right: 0;
-    padding-left: 0;
+  @media (min-width: $tablet-width) {
+    @include container-tablet;
+  }
+
+  @media (min-width: $desktop-width) {
+    @include container-desktop;
   }
 }
 
-@media (min-width: $tablet-width) {
-  .examples__header {
+
+.examples__header {
+  @media (min-width: $tablet-width) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,10 +32,8 @@
   font-size: $font-size--xx-large;
   text-align: center;
   text-transform: uppercase;
-}
 
-@media (min-width: $tablet-width) {
-  .examples__title {
+  @media (min-width: $tablet-width) {
     font-size: $font-size--xxx-large;
     text-align: left;
   }
@@ -42,194 +41,24 @@
 
 .examples__to-main {
   display: none;
-}
 
-@media (min-width: $tablet-width) {
-  .examples__to-main {
+  @media (min-width: $tablet-width) {
     display: block;
   }
 }
 
-@media (min-width: $desktop-width) {
-  .examples__items {
+.examples__items {
+  @media (min-width: $desktop-width) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 }
 
-.example {
-  margin: 20px 0;
-}
+.examples .example {
+  margin-bottom: 20px;
 
-@media (min-width: $tablet-width) {
-  .example {
-    display: flex;
-    height: 293px;
-    overflow: hidden;
-
-    &--big {
-      height: 480px;
-    }
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .example {
-    flex-direction: column;
-    width: 294px;
-    height: 541px;
-
-    &--big {
-      flex-direction: row;
-      width: 960px;
-      height: 480px;
-    }
-  }
-}
-
-.example__photo {
-  position: relative;
-
-  img {
-    display: block;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .example__photo {
-    background-color: $gray--light;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .example__photo {
-    height: 294px;
-  }
-
-  .example--big .example__photo {
-    flex-shrink: 0;
-    width: 480px;
-    height: 480px;
-  }
-}
-
-.example__best {
-  position: absolute;
-  bottom: 30px;
-  left: 0;
-
-  padding: 15px 25px;
-
-  font-weight: bold;
-  font-size: $font-size--large;
-  color: white;
-  text-transform: uppercase;
-
-  background-color: $brown--dark;
-}
-
-@media (min-width: $desktop-width) {
-  .example__best {
-    right: 0;
-    left: auto;
-  }
-}
-
-.example__content {
-  padding: 25px;
-
-  border: 1px solid $brown--light;
-  border-top: none;
-}
-
-@media (min-width: $tablet-width) {
-  .example__content {
-    display: flex;
-    flex-grow: 1;
-    flex-direction: column;
-    width: 370px;
-    // width: auto;
-    padding: 20px 55px 30px 50px;
-
-    border-top: 1px solid $brown--light;
-    border-left: none;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .example__content {
-    padding: 20px 35px 30px 35px;
-
-    border-top: none;
-    border-left: 1px solid $brown--light;
-  }
-
-  .example--big .example__content {
-    width: 480px;
-    padding-top: 150px;
-    padding-right: 145px;
-    padding-left: 40px;
-
-    border-top: 1px solid $brown--light;
-    border-left: none;
-  }
-}
-
-.example__blockquote {
-  margin: 0;
-}
-
-.example__quote-author {
-  margin: 10px 0;
-
-  font-weight: bold;
-  font-size: $font-size--x-large;
-  font-style: normal;
-}
-
-.example__review {
-  font-size: $font-size--regular;
-}
-
-.example__services {
-  @include list-reset;
-}
-
-@media (min-width: $tablet-width) {
-  .example__services {
-    margin-top: auto;
-  }
-}
-
-.example__service {
-  margin: 5px 0;
-  margin-right: 20px;
-  padding: 5px 0;
-  padding-left: 35px;
-
-  font-size: $font-size--small;
-  text-transform: uppercase;
-
-  background-repeat: no-repeat;
-  background-position: center left;
-
-  &--clip {
-    background-image: url('../img/icon-scissors.svg');
-    background-size: 21px 20px;
-  }
-
-  &--beard {
-    padding-left: 45px;
-
-    background-image: url('../img/icon-beard-1.svg');
-    background-size: 23px 21px;
-  }
-
-  &--mustache {
-    padding-left: 60px;
-
-    background-image: url('../img/icon-mustache.svg');
-    background-size: 42px 12px;
+  @media (min-width: $tablet-width) {
+    margin-bottom: 40px;
   }
 }
