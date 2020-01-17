@@ -15,6 +15,8 @@
 
   user-select: none;
 
+  -webkit-tap-highlight-color: transparent;
+
   &::before {
     content: '';
 
@@ -38,6 +40,8 @@
   }
 
   &:active {
+    -webkit-tap-highlight-color: transparent;
+
     &::before {
       background-color: $brown;
       background-image: url('../img/icon-check.svg');

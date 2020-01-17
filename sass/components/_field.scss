@@ -8,8 +8,15 @@
   font-family: $font-family;
 
   border: 1px solid $brown--light;
+  border-radius: 0;
+  outline: none;
+
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
 
   &::placeholder {
+    color: black;
+
     opacity: 1;
   }
 
@@ -19,6 +26,8 @@
 
   &:focus {
     border-color: #999999;
+
+    -webkit-tap-highlight-color: transparent;
   }
 
   @media (min-width: $tablet-width) {

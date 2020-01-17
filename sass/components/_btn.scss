@@ -16,6 +16,8 @@
   background-color: $brown--dark;
   border: none;
 
+  user-select: none;
+
   &[disabled] {
     background-color: #aeaeae;
   }
