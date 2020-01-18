@@ -24,6 +24,15 @@
     border-right: 1px solid $gray--light;
   }
 
+  &:hover,
+  &:focus-within {
+    border-color: $gray--lighten;
+  }
+
+  &:active {
+    border-color: $gray--darken;
+  }
+
   @media (min-width: $tablet-width) {
     //
   }
@@ -42,10 +51,7 @@
   min-width: 105px;
   height: 105px;
 
-  &:hover,
-  &:focus {
-    border-color: $gray--lighten;
-  }
+  outline: none;
 
   &:active {
     background-color: $gray--darken;
