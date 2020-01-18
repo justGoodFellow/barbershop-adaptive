@@ -48,6 +48,23 @@
   margin-bottom: 5px;
 }
 
+.login .field {
+  padding-right: 65px;
+
+  background-repeat: no-repeat;
+  background-position: right 25px center;
+  background-size: 15px;
+
+  &--login {
+    background-image: url('../img/icon-user.png');
+  }
+
+  &--password {
+    background-image: url('../img/icon-lock.png');
+    background-size: 15px 17px;
+  }
+}
+
 .login__row {
   display: flex;
   flex-wrap: wrap;
