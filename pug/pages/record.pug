@@ -8,7 +8,7 @@ html(lang='ru')
           a.page-header__logo-link(href='index.html')
             span.visually-hidden
               | Бородинский
-            svg.page-header__logo-img(width='226', height='30')
+            svg.page-header__logo-img(width='226' height='30')
               use(xlink:href='img/symbols.svg#logo')
       nav.main-nav
         .main-nav__container
@@ -49,51 +49,51 @@ html(lang='ru')
               .input-fields__group
                 label.visually-hidden(for='second-name')
                   | Фамилия
-                input.field(id='second-name' type='text' placeholder='Фамилия')
+                input#second-name.field(type='text' placeholder='Фамилия')
               .input-fields__group
                 label.visually-hidden(for='first-name')
                   | Имя
-                input.field(id='first-name' type='text' placeholder='Имя')
+                input#first-name.field(type='text' placeholder='Имя')
               .input-fields__group
                 label.visually-hidden(for='middle-name')
                   | Отчество
-                input.field(id='middle-name' type='text' placeholder='Отчество')
+                input#middle-name.field(type='text' placeholder='Отчество')
             .input-fields__row.input-fields__row--contacts
               .input-fields__group
                 label.visually-hidden(for='phone')
                   | Контактный телефон
-                input.field(id='phone' type='tel' placeholder='Контактный телефон')
+                input#phone.field(type='tel' placeholder='Контактный телефон')
               .input-fields__group
                 label.visually-hidden(for='email')
                   | Контактный e-mail
-                input.field(id='email' type='email' placeholder='Контактный e-mail')
+                input#email.field(type='email' placeholder='Контактный e-mail')
             .input-fields__row
               .input-fields__group
                 label.visually-hidden(for='additionally')
                   | Доп. информация для мастера
-                textarea.field(id='additionally' placeholder='Доп. информация для мастера')
+                textarea#additionally.field(placeholder='Доп. информация для мастера')
           fieldset.record__filters.record__filters--models
             legend.record__filters-legend
               | Выберите модель бороды:
             .record__filters-items
               .radiobox
-                input.radiobox__input(id='admiral' type='radio' name='model' checked)
+                input#admiral.radiobox__input(type='radio' name='model' checked)
                 label.radiobox__label.radiobox__label--admiral(for='admiral')
                   | Адмирал
               .radiobox
-                input.radiobox__input(id='woodcutter' type='radio' name='model')
+                input#woodcutter.radiobox__input(type='radio' name='model')
                 label.radiobox__label.radiobox__label--woodcutter(for='woodcutter')
                   | Лесоруб
               .radiobox
-                input.radiobox__input(id='explorer' type='radio' name='model')
+                input#explorer.radiobox__input(type='radio' name='model')
                 label.radiobox__label.radiobox__label--explorer(for='explorer')
                   | Полярник
               .radiobox
-                input.radiobox__input(id='boyar' type='radio' name='model')
+                input#boyar.radiobox__input(type='radio' name='model')
                 label.radiobox__label.radiobox__label--boyar(for='boyar')
                   | Боярин
               .radiobox
-                input.radiobox__input(id='sage' type='radio' name='model')
+                input#sage.radiobox__input(type='radio' name='model')
                 label.radiobox__label.radiobox__label--sage(for='sage')
                   | Мудрец
           fieldset.record__filters.record__filters--services
@@ -101,32 +101,32 @@ html(lang='ru')
               | Дополнительные услуги:
             .record__filters-items
               .checkbox
-                input.checkbox__input(id='coloring-beard' type='checkbox' checked)
+                input#coloring-beard.checkbox__input(type='checkbox' checked)
                 label.checkbox__label(for='coloring-beard')
                   span.checkbox__label-text
                     | Подкрасить бороду
               .checkbox
-                input.checkbox__input(id='screw-mustache' type='checkbox' checked)
+                input#screw-mustache.checkbox__input(type='checkbox' checked)
                 label.checkbox__label(for='screw-mustache')
                   span.checkbox__label-text
                     | Накрутить усы
               .checkbox
-                input.checkbox__input(id='comb-beard' type='checkbox')
+                input#comb-beard.checkbox__input(type='checkbox')
                 label.checkbox__label(for='comb-beard')
                   span.checkbox__label-text
                     | Причесать бороду
               .checkbox
-                input.checkbox__input(id='temples' type='checkbox')
+                input#temples.checkbox__input(type='checkbox')
                 label.checkbox__label(for='temples')
                   span.checkbox__label-text
                     | Подровнять виски
               .checkbox
-                input.checkbox__input(id='coloring-hair' type='checkbox')
+                input#coloring-hair.checkbox__input(type='checkbox')
                 label.checkbox__label(for='coloring-hair')
                   span.checkbox__label-text
                     | Убрать седину
               .checkbox
-                input.checkbox__input(id='polishing' type='checkbox')
+                input#polishing.checkbox__input(type='checkbox')
                 label.checkbox__label(for='polishing')
                   span.checkbox__label-text
                     | Отполировать лысину

@@ -9,14 +9,14 @@ section.login
         .login__field-group
           label.visually-hidden(for='login')
             | Логин
-          input.field.field--login(id='login' type='text' placeholder='Логин')
+          input#login.field.field--login(type='text' placeholder='Логин')
         .login__field-group
           label.visually-hidden(for='password')
             | Пароль
-          input.field.field--password(id='password' type='password' placeholder='Пароль')
+          input#password.field.field--password(type='password' placeholder='Пароль')
       .login__row
         .login__checkbox.checkbox
-          input.checkbox__input(id='remember' type='checkbox')
+          input#remember.checkbox__input(type='checkbox')
           label.checkbox__label(for='remember')
             span.checkbox__label-text
               | Запомните меня
