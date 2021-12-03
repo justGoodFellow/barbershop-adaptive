@@ -1,0 +1,26 @@
+{
+  "disallowClassAttributeWithStaticValue": true,
+  "disallowDuplicateAttributes": true,
+  "disallowHtmlText": true,
+  "disallowIdAttributeWithStaticValue": true,
+  "disallowMultipleLineBreaks": true,
+  "disallowSpacesInsideAttributeBrackets": true,
+  // "maximumLineLength": 80,
+  "requireClassLiteralsBeforeAttributes": true,
+  "requireIdLiteralsBeforeAttributes": true,
+  "requireLowerCaseAttributes": true,
+  "requireLowerCaseTags": true,
+  "requireSpecificAttributes": [
+    {
+      "img": [ "alt" ]
+    }
+  ],
+  "validateAttributeQuoteMarks": "'",
+  "validateAttributeSeparator": {
+    "separator": " ",
+    "multiLineSeparator": "\n  "
+  },
+  "validateDivTags": true,
+  "validateExtensions": true,
+  "validateSelfClosingTags": true
+}

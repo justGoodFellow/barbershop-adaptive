@@ -5,12 +5,14 @@
   "homepage": "https://github.com/justGoodFellow/barbershop.git",
   "private": true,
   "engines": {
-    "node": "8.16"
+    "node": "14.18.1"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
-    "stylelint": "stylelint \"sass/**/*.scss\" --syntax scss",
-    "test": "npm run editorconfig && npm run stylelint",
+    "pug-lint": "pug-lint pug/**/*.pug",
+    "stylelint": "stylelint \"sass/**/*.scss\"",
+    "eslint": "eslint js",
+    "test": "npm run editorconfig && npm run pug-lint && npm run stylelint && npm run eslint",
     "build": "gulp",
     "start": "gulp && gulp serve"
   },
@@ -31,28 +33,32 @@
   ],
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "^1.0.0",
-    "autoprefixer": "^9.7.3",
-    "browser-sync": "^2.26.7",
+    "autoprefixer": "^10.4.0",
+    "browser-sync": "^2.27.7",
     "css-mqpacker": "^7.0.0",
-    "del": "^5.1.0",
+    "del": "^6.0.0",
     "editorconfig-tools": "^0.1.1",
-    "eslint": "^6.7.2",
-    "eslint-config-htmlacademy": "^0.5.2",
+    "eslint": "^8.2.0",
+    "eslint-config-htmlacademy": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-csso": "^4.0.1",
-    "gulp-imagemin": "^6.2.0",
+    "gulp-imagemin": "^7.1.0",
     "gulp-minify": "^3.1.0",
     "gulp-plumber": "^1.2.1",
-    "gulp-postcss": "^8.0.0",
-    "gulp-pug": "^4.0.1",
+    "gulp-postcss": "^9.0.1",
+    "gulp-pug": "^5.0.0",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-svgmin": "^2.2.0",
-    "gulp-svgstore": "^7.0.1",
+    "gulp-sass": "^5.0.0",
+    "gulp-svgmin": "^4.1.0",
+    "gulp-svgstore": "^9.0.0",
+    "postcss": "^8.3.11",
     "postcss-object-fit-images": "^1.1.2",
-    "stylelint": "^12.0.0",
-    "stylelint-config-htmlacademy": "^0.1.4"
+    "pug-lint": "^2.6.0",
+    "sass": "^1.43.4",
+    "stylelint": "^14.0.1",
+    "stylelint-config-htmlacademy": "^0.1.11",
+    "stylelint-config-standard-scss": "^3.0.0"
   },
   "dependencies": {}
 }

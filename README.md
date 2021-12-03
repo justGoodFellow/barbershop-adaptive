@@ -8,4 +8,4 @@
     npm run build
 
 #### Тестирование
-  npm test
+    npm test
