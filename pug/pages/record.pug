@@ -71,18 +71,23 @@ html(lang='ru')
               .input-fields__group
                 label.visually-hidden(for='additionally')
                   | Доп. информация для мастера
-                textarea#additionally.field(placeholder='Доп. информация для мастера')
+                textarea#additionally.field(
+                  placeholder='Доп. информация для мастера')
           fieldset.record__filters.record__filters--models
             legend.record__filters-legend
               | Выберите модель бороды:
             .record__filters-items
               .radiobox
-                input#admiral.radiobox__input(type='radio' name='model' checked)
+                input#admiral.radiobox__input(
+                  type='radio'
+                  name='model'
+                  checked)
                 label.radiobox__label.radiobox__label--admiral(for='admiral')
                   | Адмирал
               .radiobox
                 input#woodcutter.radiobox__input(type='radio' name='model')
-                label.radiobox__label.radiobox__label--woodcutter(for='woodcutter')
+                label.radiobox__label.radiobox__label--woodcutter(
+                  for='woodcutter')
                   | Лесоруб
               .radiobox
                 input#explorer.radiobox__input(type='radio' name='model')
