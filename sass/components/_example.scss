@@ -36,7 +36,6 @@
   }
 }
 
-
 .example--big .example__photo {
   @media (min-width: $desktop-width) {
     flex-shrink: 0;
@@ -90,7 +89,7 @@
   @media (min-width: $desktop-width) {
     width: 294px;
     min-height: 245px;
-    padding: 20px 35px 30px 35px;
+    padding: 20px 35px;
 
     border-top: none;
     border-left: 1px solid $brown--light;

@@ -86,30 +86,6 @@
 
   color: inherit;
   text-decoration: none;
-
-  &:hover,
-  &:focus {
-    .news__date {
-      background-color: $brown--dark;
-    }
-
-    .news__text {
-      color: $brown--dark;
-      text-decoration: underline;
-    }
-  }
-
-  &:active {
-    .news__date {
-      color: rgba(white, 0.3);
-
-      background-color: $brown--darkest;
-    }
-
-    .news__text {
-      color: $brown--darkest;
-    }
-  }
 }
 
 .news__text {
@@ -128,6 +104,30 @@
   color: white;
 
   background-color: black;
+}
+
+.news__link:hover,
+.news__link:focus {
+  .news__date {
+    background-color: $brown--dark;
+  }
+
+  .news__text {
+    color: $brown--dark;
+    text-decoration: underline;
+  }
+}
+
+.news__link:active {
+  .news__date {
+    color: rgba(white, 0.3);
+
+    background-color: $brown--darkest;
+  }
+
+  .news__text {
+    color: $brown--darkest;
+  }
 }
 
 .news__day {

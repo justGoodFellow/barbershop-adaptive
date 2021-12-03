@@ -53,15 +53,6 @@
 
   outline: none;
 
-  &:active {
-    background-color: $gray--darken;
-    border-color: $gray--darken;
-
-    &::after {
-      opacity: 0.3;
-    }
-  }
-
   &::after {
     content: '';
 
@@ -71,6 +62,15 @@
 
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  &:active {
+    background-color: $gray--darken;
+    border-color: $gray--darken;
+
+    &::after {
+      opacity: 0.3;
+    }
   }
 
   &--vk {

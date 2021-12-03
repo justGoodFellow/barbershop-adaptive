@@ -1,9 +1,20 @@
 {
-  "extends": "stylelint-config-htmlacademy",
-
+  "extends": [
+    "stylelint-config-standard-scss"
+  ],
   "rules": {
-    "string-quotes": "single",
+    "color-function-notation": "legacy",
+    "color-hex-length": "long",
+    "color-named": "always-where-possible",
+    "declaration-block-no-redundant-longhand-properties": null,
+    "declaration-empty-line-before": null,
     "declaration-no-important": true,
-    "indentation": [2, {"ignore": ["inside-parens"]}]
+    "indentation": [2, {"ignore": ["inside-parens"]}],
+    "max-line-length": 80,
+    "scss/comment-no-empty": null,
+    "scss/dollar-variable-pattern": null,
+    "scss/double-slash-comment-empty-line-before": null,
+    "selector-class-pattern": null,
+    "string-quotes": "single"
   }
 }
