@@ -120,15 +120,15 @@ function serve() {
 }
 
 var build = gulp.series(
-    clean,
-    copy,
-    gulp.parallel(
-        templates,
-        styles,
-        scripts,
-        images,
-        symbols
-    )
+  clean,
+  copy,
+  gulp.parallel(
+    templates,
+    styles,
+    scripts,
+    images,
+    symbols
+  )
 );
 
 exports.clean = clean;

@@ -1,11 +1,11 @@
 {
   "name": "barbershop",
   "description": "Учебный проект - «Барбершоп» (адаптивный)",
-  "author": "Sergey Bodnaryuk <bodnaryuk_s.a@hotmail.com>",
   "homepage": "https://github.com/justGoodFellow/barbershop.git",
+  "author": "Sergey Bodnaryuk <s.bodnaryuk@gmail.com>",
   "private": true,
   "engines": {
-    "node": "14.18.1"
+    "node": "14.19.0"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
@@ -17,8 +17,8 @@
     "start": "gulp && gulp serve"
   },
   "editorconfig-cli": [
-    "*.json",
     "*.js",
+    "*.json",
     "pug/**/*.pug",
     "img/*.svg",
     "sass/**/*.scss",
@@ -28,17 +28,16 @@
     "> 0.5% in RU",
     "last 2 versions",
     "IE 11",
-    "iOS >= 10",
+    "iOS >= 10.3",
     "not dead"
   ],
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "^1.0.0",
-    "autoprefixer": "^10.4.0",
+    "autoprefixer": "^10.4.2",
     "browser-sync": "^2.27.7",
     "css-mqpacker": "^7.0.0",
     "del": "^6.0.0",
-    "editorconfig-tools": "^0.1.1",
-    "eslint": "^8.2.0",
+    "eslint": "^8.10.0",
     "eslint-config-htmlacademy": "^5.0.0",
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
@@ -49,15 +48,14 @@
     "gulp-postcss": "^9.0.1",
     "gulp-pug": "^5.0.0",
     "gulp-rename": "^2.0.0",
-    "gulp-sass": "^5.0.0",
+    "gulp-sass": "^5.1.0",
     "gulp-svgmin": "^4.1.0",
     "gulp-svgstore": "^9.0.0",
-    "postcss": "^8.3.11",
+    "postcss": "^8.4.7",
     "postcss-object-fit-images": "^1.1.2",
     "pug-lint": "^2.6.0",
-    "sass": "^1.43.4",
-    "stylelint": "^14.0.1",
-    "stylelint-config-htmlacademy": "^0.1.11",
+    "sass": "^1.49.9",
+    "stylelint": "^14.5.3",
     "stylelint-config-standard-scss": "^3.0.0"
   },
   "dependencies": {}
