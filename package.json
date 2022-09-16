@@ -1,7 +1,7 @@
 {
-  "name": "barbershop",
+  "name": "barbershop-adaptive",
   "description": "Учебный проект - «Барбершоп» (адаптивный)",
-  "homepage": "https://github.com/justGoodFellow/barbershop.git",
+  "homepage": "https://github.com/justGoodFellow/barbershop-adaptive",
   "author": "Sergey Bodnaryuk <s.bodnaryuk@gmail.com>",
   "private": true,
   "engines": {
