@@ -1,9 +1,10 @@
 {
   "env": {
     "browser": true,
+    "es6": true,
     "node": true
   },
-  "extends": "htmlacademy/es5",
+  "extends": ["eslint:recommended", "htmlacademy/vanilla"],
   "rules": {
     "indent": ["error", 2],
     "object-curly-spacing": ["error", "always"]

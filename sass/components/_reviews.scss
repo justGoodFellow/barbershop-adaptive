@@ -149,7 +149,7 @@
 }
 
 .reviews__arrow {
-  @media (max-width: $tablet-width - 1) {
+  @media (max-width: ($tablet-width - 1)) {
     display: none;
   }
 

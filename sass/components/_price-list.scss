@@ -57,7 +57,7 @@
 }
 
 .price-list__items tr {
-  @media (max-width: $tablet-width - 1) {
+  @media (max-width: ($tablet-width - 1)) {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 15px;
@@ -102,7 +102,7 @@
 }
 
 .price-list__info {
-  @media (max-width: $tablet-width - 1) {
+  @media (max-width: ($tablet-width - 1)) {
     order: 1;
   }
 

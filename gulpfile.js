@@ -1,24 +1,23 @@
 'use strict';
 
-var autoprefixer = require('autoprefixer');
-var concat = require('gulp-concat');
-var cssminify = require('gulp-csso');
-var del = require('del');
-var gulp = require('gulp');
-var imagemin = require('gulp-imagemin');
-var jsminify = require('gulp-minify');
-var objectfit = require('postcss-object-fit-images');
-var mqpacker = require('css-mqpacker');
-var plumber = require('gulp-plumber');
-var postcss = require('gulp-postcss');
-var pug = require('gulp-pug');
-var rename = require('gulp-rename');
-var sass = require('gulp-sass')(require('sass'));
-var sourcemaps = require('gulp-sourcemaps');
-var svgmin = require('gulp-svgmin');
-var svgstore = require('gulp-svgstore');
-var sync = require('browser-sync').create();
-var webp = require('gulp-webp');
+const autoprefixer = require('autoprefixer');
+const concat = require('gulp-concat');
+const cssminify = require('gulp-csso');
+const del = require('del');
+const gulp = require('gulp');
+const imagemin = require('gulp-imagemin');
+const jsminify = require('gulp-minify');
+const mqpacker = require('css-mqpacker');
+const plumber = require('gulp-plumber');
+const postcss = require('gulp-postcss');
+const pug = require('gulp-pug');
+const rename = require('gulp-rename');
+const sass = require('gulp-sass')(require('sass'));
+const sourcemaps = require('gulp-sourcemaps');
+const svgmin = require('gulp-svgmin');
+const svgstore = require('gulp-svgstore');
+const sync = require('browser-sync').create();
+const webp = require('gulp-webp');
 
 function clean() {
   return del(['build']);
@@ -54,7 +53,6 @@ function styles() {
     .pipe(
       postcss([
         autoprefixer(),
-        objectfit(),
         mqpacker({
           sort: true,
         }),
@@ -143,7 +141,7 @@ function server() {
   gulp.watch('js/**/*.js', scripts);
 }
 
-var build = gulp.series(
+const build = gulp.series(
   clean,
   copy,
   templates,

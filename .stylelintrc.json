@@ -1,9 +1,9 @@
 {
-  "plugins": ["stylelint-order"],
   "extends": [
-    "stylelint-config-recommended-scss",
-    "stylelint-config-htmlacademy"
+    "stylelint-config-htmlacademy",
+    "stylelint-config-recommended-scss"
   ],
+  "plugins": ["stylelint-order"],
   "rules": {
     "color-named": "always-where-possible",
     "declaration-no-important": true,
